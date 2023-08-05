@@ -1,0 +1,18 @@
+.email_send{
+    display: flex;
+    margin-top: 28px;
+}
+.email_send_txt{
+    font-size: 16px;
+    color: #5C5F5F;
+    margin-right: 8px;
+    line-height: 20px;
+}
+.email_resend{
+    background-color: #ECEEEF;
+    border-radius: 8px;
+    border: none;
+    width: 116px;
+    height: 26px;
+    font-size: 14px;
+}
