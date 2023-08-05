@@ -1,7 +1,7 @@
 import "./App.css"
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
-import { Email, Code} from './pages/private_info';
+import { Email, Code, Nickname} from './pages/private_info';
 
 function App() {
   return (
@@ -10,6 +10,7 @@ function App() {
         <Routes>
             <Route path="/" element={<Email/>}/>
             <Route path="/code" element={<Code/>}/>
+            <Route path="/nickname" element={<Nickname/>}/>
         </Routes>
       </Router>
     </div>
