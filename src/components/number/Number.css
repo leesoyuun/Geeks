@@ -1,0 +1,14 @@
+.total_circle{
+    display: flex;
+}
+.circle{
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #F8BF00;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 26px;
+    text-align: center;
+    margin-right: 8px;
+}
