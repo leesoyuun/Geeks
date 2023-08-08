@@ -5,17 +5,15 @@ import Button from "../../components/button/Button";
 
 const Department = () => {
     return(
-        <div>
+        <div className='main'>
             <TopBar></TopBar>
-            <div className='main'>
-                <Circle></Circle>
-                <div className='email_text'>어느 과 이신가요?</div>
-                <div className='input_email'>
-                    <input type='number'/>
-                </div>
-                <div className='content'>
-                    <Button content='다음'></Button>
-                </div>
+            <Circle></Circle>
+            <div className='email_text'>어느 과 이신가요?</div>
+            <div className='input_email'>
+                <input type='number'/>
+            </div>
+            <div className='content'>
+                <Button content='다음'></Button>
             </div>
         </div>
     );
