@@ -2,6 +2,7 @@
     width: 390px;
     height: 844px;
     margin: 0 auto;
+    padding-left: 20px;
 }
 .email_text{
     font-weight: bold;
@@ -15,19 +16,27 @@
     line-height: 20px;
     margin: 0 auto;
 }
-.input_email{
+.input_emails{
+    display: flex;
     margin-top: 60px;
-    margin-bottom: 334px;
-    border: none; /* 모든 테두리를 없앱니다 */
-    border-bottom: 2px solid #C4C7C7; /* 아래 테두리를 설정합니다 */
-    outline: none; /* 포커스시 생기는 외곽선을 없앱니다 (선택사항) */
+    padding: 7px 0px 8px 0px;
+    border-bottom: 2px solid #C4C7C7;
+    color: #C4C7C7;
+    font-size: 24px;
+    font-weight: 600;
     width: 350px;
 }
-.input_email input[type="number"] {
-    position: absolute;
-    width: 0;
-    height: 0;
-    padding: 0;
-    overflow: hidden;
-    border: 0;
+.input_email{
+    font-weight: 600;
+    width: 134px;
+    border: none;
+    outline: none;
+    font-size: 24px;
+}
+.univ{
+    width: 100%;
+    text-align: right;
+}
+.input_email::-webkit-inner-spin-button {
+    -webkit-appearance: none;
 }
