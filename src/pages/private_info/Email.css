@@ -16,7 +16,7 @@
     line-height: 20px;
     margin: 0 auto;
 }
-.input_emails{
+.input_infos{
     display: flex;
     margin-top: 60px;
     padding: 7px 0px 8px 0px;
@@ -26,7 +26,7 @@
     font-weight: 600;
     width: 350px;
 }
-.input_email{
+.input_info{
     font-weight: 600;
     width: 134px;
     border: none;
