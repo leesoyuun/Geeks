@@ -12,3 +12,10 @@
     text-align: center;
     margin-right: 8px;
 }
+.title_text{
+    white-space: pre-line;
+    font-weight: bold;
+    font-size: 24px;
+    margin-top: 28px;
+    line-height: 32px;
+}
