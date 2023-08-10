@@ -1,5 +1,6 @@
 import React, {useRef, useState, useContext} from "react";
 import { UserContext } from "./Register";
+import { useNavigate } from "react-router-dom";
 import TopBar from "../../components/header/Header";
 import NumberTitle from "../../components/number/Number";
 import Button from "../../components/button/Button";
@@ -8,9 +9,11 @@ import "./Email.css";
 const Email = () => {
     const emailRef = useRef('');
     const {setStep, setEmail, setNickname} = useContext(UserContext);
+    const navigate = useNavigate();
 
     const handleClick = (e) => {
         setEmail(emailRef.current.value + "@sangmyung.kr");
+        navigate('/code')
         setStep(2);
     };
 

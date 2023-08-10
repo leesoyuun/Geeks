@@ -13,6 +13,11 @@
     line-height: 32px;
 }
 .content{
+    display: flex;
+    height: 100%;
+    margin-bottom: 11.6%;
+    justify-items: flex-end;
+    align-items: flex-end;
     font-weight: 600;
     font-size: 18px;
     line-height: 20px;
