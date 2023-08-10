@@ -1,19 +1,54 @@
-import React, {useRef} from "react";
+import React, {useRef, useState, useContext} from "react";
+import { UserContext } from "./Register";
 import TopBar from "../../components/header/Header";
 import NumberTitle from "../../components/number/Number";
 import Button from "../../components/button/Button";
+import axios from "axios"
 import "./Code.css";
 
 const Code = () => {
     const inputRefs = [useRef(), useRef(), useRef(), useRef()];
 
+    const {email, setStep} = useContext(UserContext);
+    let num = "";
+
+    const checkCode = () => {
+        async function fetchEmail() {
+            console.log(email);
+            try {
+                const res = await axios.post('http://127.0.0.1:8080/email/checkcode', {
+                    Email: email, 
+                    num: num
+                });
+
+            if(res.data.success) {
+                setStep(3);
+            } 
+            else {
+                console.log(res);
+            }
+            } catch (error) {
+                console.error(error);               
+            }
+        }
+
+        fetchEmail();
+    }
+
     const handleInputChange = (index, event) => {
         const nextIndex = index + 1;
+
+        num += event.target.value;
 
         if (event.target.value.length === 1 && nextIndex < inputRefs.length) {
             inputRefs[nextIndex].current.focus();
         }
+
+        if(num.length == 4) {
+            checkCode();
+        }
     };
+
     return (
         <div className='main'>
             <TopBar></TopBar>

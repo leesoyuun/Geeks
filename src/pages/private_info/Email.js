@@ -1,9 +1,10 @@
-import React, {useRef, useState, useContext} from "react";
+import React, {useRef, useState, useContext, useEffect} from "react";
 import { UserContext } from "./Register";
 import { useNavigate } from "react-router-dom";
 import TopBar from "../../components/header/Header";
 import NumberTitle from "../../components/number/Number";
 import Button from "../../components/button/Button";
+import axios from "axios"
 import "./Email.css";
 
 const Email = () => {
@@ -12,9 +13,23 @@ const Email = () => {
     const navigate = useNavigate();
 
     const handleClick = (e) => {
+        const newEmail = emailRef.current.value + "@sangmyung.kr";
+
+        async function fetchEmail() {
+            try {
+                console.log(newEmail);
+                const res = await axios.post('http://127.0.0.1:8080/email/sendcode', {
+                    Email: newEmail
+                });
+            } catch (error) {
+                console.error(error);               
+            }
+        }
+        
         setEmail(emailRef.current.value + "@sangmyung.kr");
-        navigate('/code')
         setStep(2);
+        
+        fetchEmail();
     };
 
     return (

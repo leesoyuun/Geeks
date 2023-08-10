@@ -1,14 +1,14 @@
 import "./App.css"
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
-import { Email, Code, Nickname, Showname, Department, MoreInfo1, MoreInfo2, MoreInfo3, MoreInfo4, FinalPage} from './pages/private_info';
+import { Email, Code, Nickname, Showname, Department, MoreInfo1, MoreInfo2, MoreInfo3, MoreInfo4, FinalPage, Register} from './pages/private_info';
 
 function App() {
   return (
     <div>
       <Router>
         <Routes>
-            <Route path="/" element={<Email/>}/>
+            <Route path="/" element={<Register/>}/>
             <Route path="/code" element={<Code/>}/>
             <Route path="/nickname" element={<Nickname/>}/>
             <Route path="/showname" element={<Showname/>}/>
