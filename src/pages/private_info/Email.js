@@ -35,7 +35,7 @@ const Email = () => {
     return (
         <div className='main'>
             <TopBar></TopBar>
-            <NumberTitle title={`재학생 인증을 위해\n 학교 이메일 주소를 입력해 주세요.`}></NumberTitle>
+            <NumberTitle title={`재학생 인증을 위해\n 학교 이메일 주소를 입력해 주세요.`} flag = {1}></NumberTitle>
             <div className='input_infos'>
                 <input className='input_info' type='number' ref={emailRef}/>
                 <div className='univ'>@sangmyung.kr</div>

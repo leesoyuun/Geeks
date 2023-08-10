@@ -18,7 +18,7 @@ const Nickname = () => {
     return (
         <div className='main'>
             <TopBar></TopBar>
-            <NumberTitle title={`회원님을 표현한\n 닉네임을 알려주세요!`}></NumberTitle>
+            <NumberTitle title={`회원님을 표현한\n 닉네임을 알려주세요!`} flag={2}></NumberTitle>
             <input className='input_nick' type='text'
                    maxLength="8" onChange={handleChange}/>
             <div className='nick_cnt'>{NumCount}/8</div>

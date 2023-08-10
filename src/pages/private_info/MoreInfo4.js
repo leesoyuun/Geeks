@@ -9,7 +9,7 @@ const MoreInfo4 = () =>{
     return(
         <div className='main'>
             <TopBar></TopBar>
-            <NumberTitle title={`은진 님에 대해\n더 자세히 알려주세요! (4/4)`}></NumberTitle>
+            <NumberTitle title={`은진 님에 대해\n더 자세히 알려주세요! (4/4)`} flag={4}></NumberTitle>
             {/*성향 파트*/}
             <div className='sub_title'>성향</div>
             <div className='info_rounds'>
