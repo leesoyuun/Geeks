@@ -7,9 +7,14 @@ const Department = () => {
     return(
         <div className='main'>
             <TopBar></TopBar>
-            <NumberTitle title={`어느 과 이신가요?`}></NumberTitle>
-            <div className='input_email'>
-                <input type='number'/>
+            <NumberTitle title={`전공 학과와 학번을 알려주세요`}></NumberTitle>
+            <div className='input_infos'>
+                <input className='input_info' type='text'/>
+                <div className='univ'>학과/전공</div>
+            </div>
+            <div className='input_infos_ID'>
+                <input className='input_info_ID' type='number'/>
+                <div className='univ'>학번</div>
             </div>
             <div className='content'>
                 <Button content='다음'></Button>

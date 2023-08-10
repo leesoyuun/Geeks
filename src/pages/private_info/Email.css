@@ -26,7 +26,7 @@
     display: flex;
     align-items: flex-end;
 }
-.input_infos{
+.input_infos, .input_infos_ID{
     display: flex;
     margin-top: 60px;
     padding: 7px 0px 8px 0px;
@@ -36,17 +36,23 @@
     font-weight: 600;
     width: 350px;
 }
-.input_info{
+.input_infos_ID{
+    width: 88px !important;
+}
+.input_info, .input_info_ID{
     font-weight: 600;
     width: 134px;
     border: none;
     outline: none;
     font-size: 24px;
 }
+.input_info_ID{
+    width: 33px;
+}
 .univ{
     width: 100%;
     text-align: right;
 }
-.input_info::-webkit-inner-spin-button {
+.input_info, .input_info_ID::-webkit-inner-spin-button {
     -webkit-appearance: none;
 }
