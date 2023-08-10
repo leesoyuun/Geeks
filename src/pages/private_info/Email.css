@@ -2,7 +2,9 @@
     width: 390px;
     height: 844px;
     margin: 0 auto;
-    padding-left: 20px;
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
 }
 .email_text{
     font-weight: bold;
@@ -14,7 +16,10 @@
     font-weight: 600;
     font-size: 18px;
     line-height: 20px;
-    margin: 0 auto;
+}
+.test{
+    display: flex;
+    align-items: flex-end;
 }
 .input_infos{
     display: flex;
@@ -37,6 +42,6 @@
     width: 100%;
     text-align: right;
 }
-.input_email::-webkit-inner-spin-button {
+.input_info::-webkit-inner-spin-button {
     -webkit-appearance: none;
 }
