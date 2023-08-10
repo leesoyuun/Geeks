@@ -1,0 +1,21 @@
+.welcome {
+    color: #2E3132;
+    text-align: center;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px;
+    margin-top: 136px;
+}
+
+.welcome_ment {
+    color: #8E9192;
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 26px;
+    margin-top: 32px;
+    margin-bottom: 96px;
+}
