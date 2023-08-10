@@ -15,12 +15,14 @@
 .content{
     display: flex;
     height: 100%;
+    margin: 0 auto;
     margin-bottom: 11.6%;
-    justify-items: flex-end;
+    justify-items: center;
     align-items: flex-end;
     font-weight: 600;
     font-size: 18px;
     line-height: 20px;
+
 }
 .test{
     display: flex;

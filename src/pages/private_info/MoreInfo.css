@@ -1,0 +1,11 @@
+.sub_title {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+    margin-bottom: 12px;
+    margin-top: 22px;
+}
+.info_rounds{
+    display: flex;
+}
