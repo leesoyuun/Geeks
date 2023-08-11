@@ -21,7 +21,7 @@ export const UserContext = createContext({
 const Register = () => {
     const [email, setEmail] = useState(null);
     const [nickname, setNickname] = useState("");
-    const [step, setStep] = useState(1);
+    const [step, setStep] = useState(6);
     const [gender, setGender] = useState(null);
     const [major, setMajor] = useState("")
 

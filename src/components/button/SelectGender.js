@@ -11,15 +11,15 @@ const SelectBtn = (props) => {
 
     const ChangeColor = () => {
         if (props.gender === '남자') {
-            bgColor === '#F2F4F4' ?  setBgColor('#FFF2DD') : setBgColor('#F2F4F4')
-        } else if (props.gender === '여자') {
-            bgColor === '#F2F4F4' ?  setBgColor('#FFF2DD') : setBgColor('#F2F4F4')
+            setGender(1);
+        } 
+        else if (props.gender === '여자') {
+            setGender(2);
         }
     }
 
     return (
-        <div className='gender_box' onClick={ChangeColor}
-             style={{backgroundColor: bgColor}}>
+        <div className={props.gender === '남자' ? (gender === 1 ? 'gender_box_yellow' : 'gender_box') : (gender === 2 ? 'gender_box_yellow' : 'gender_box')} onClick={ChangeColor}>
             <div className='gender'>{props.gender}</div>
             <div className='gender_imgs'>
                 <img className='gender_img' src={props.gender === '남자' ? male : female}/>
