@@ -55,6 +55,6 @@
     width: 100%;
     text-align: right;
 }
-.input_info, .input_info_ID::-webkit-inner-spin-button {
+.input_info::-webkit-inner-spin-button, .input_info_ID::-webkit-inner-spin-button {
     -webkit-appearance: none;
 }
