@@ -9,7 +9,9 @@ import MoreInfo3 from "./MoreInfo3";
 import MoreInfo4 from "./MoreInfo4";
 import FinalPage from "./FinalPage";
 import Register from './Register';
+import Gender from './Gender';
 
-export { Email, Code, Nickname, Showname, Department, MoreInfo1, MoreInfo2, MoreInfo3, MoreInfo4, FinalPage, Register };
+export { Email, Code, Nickname, Showname, Department, MoreInfo1, MoreInfo2, MoreInfo3, MoreInfo4, FinalPage, Register
+,Gender};
 
 

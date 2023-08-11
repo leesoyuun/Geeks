@@ -1,7 +1,7 @@
 import "./App.css"
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
-import { Email, Code, Nickname, Showname, Department, MoreInfo1, MoreInfo2, MoreInfo3, MoreInfo4, FinalPage, Register} from './pages/private_info';
+import { Email, Code, Nickname, Showname, Department, MoreInfo1, MoreInfo2, MoreInfo3, MoreInfo4, FinalPage, Register,Gender} from './pages/private_info';
 
 function App() {
   return (
@@ -18,6 +18,7 @@ function App() {
             <Route path="/MoreInfo3" element={<MoreInfo3/>}/>
             <Route path="/MoreInfo4" element={<MoreInfo4/>}/>
             <Route path="/FinalPage" element={<FinalPage/>}/>
+            <Route path="/Gender" element={<Gender/>}/>
         </Routes>
       </Router>
     </div>

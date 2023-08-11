@@ -1,0 +1,33 @@
+.gender_box {
+    width: 171px;
+    height: 220px;
+    border-radius: 16px;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px;
+    cursor: pointer;
+    background-color: #F2F4F4;
+}
+
+.gender_box_yellow {
+    width: 171px;
+    height: 220px;
+    border-radius: 16px;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px;
+    cursor: pointer;
+    background-color: #FFF2DD;
+}
+
+.gender{
+    margin: 20px 109px 32px 20px;
+}
+.gender_imgs{
+    width: 100%;
+}
+.gender_img{
+    margin:auto;
+}
