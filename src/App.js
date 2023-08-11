@@ -8,17 +8,12 @@ function App() {
     <div>
       <Router>
         <Routes>
-            <Route path="/" element={<Register/>}/>
-            <Route path="/code" element={<Code/>}/>
-            <Route path="/nickname" element={<Nickname/>}/>
-            <Route path="/showname" element={<Showname/>}/>
-            <Route path="/department" element={<Department/>}/>
+            <Route path="/" element={<Register/>}/>           
             <Route path="/MoreInfo1" element={<MoreInfo1/>}/>
             <Route path="/MoreInfo2" element={<MoreInfo2/>}/>
             <Route path="/MoreInfo3" element={<MoreInfo3/>}/>
             <Route path="/MoreInfo4" element={<MoreInfo4/>}/>
             <Route path="/FinalPage" element={<FinalPage/>}/>
-            <Route path="/Gender" element={<Gender/>}/>
         </Routes>
       </Router>
     </div>

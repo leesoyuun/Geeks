@@ -8,19 +8,20 @@ import {UserContext} from "./Register";
 
 const Nickname = () => {
     const [NumCount, setNumCount] = useState(0);
+    const [name, setName] = useState("");
     const {setNickname, setStep} = useContext(UserContext);
     let nickname;
 
     const handleChange = (event) => {
-        nickname = event.target.value;
+        setName(event.target.value);
 
-        if (nickname.length <= 8) {
-            setNumCount(nickname.length);
+        if (name.length <= 8) {
+            setNumCount(name.length);
         }
     };
 
     const handleClick = () => {
-        setNickname(nickname);
+        setNickname(name);
         setStep(4);
     }
 

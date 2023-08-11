@@ -4,6 +4,8 @@ import Nickname from "./Nickname";
 import Code from './Code';
 import Gender from './Gender';
 import axios from "axios";
+import Showname from './Showname';
+import Department from './Department';
 
 export const UserContext = createContext({
     email: null,
@@ -17,23 +19,17 @@ export const UserContext = createContext({
 });
 
 const Register = () => {
-    /*const [email, setEmail] = useState(null);
+    const [email, setEmail] = useState(null);
     const [nickname, setNickname] = useState("");
-    const [step, setStep] = useState(3);
+    const [step, setStep] = useState(1);
     const [gender, setGender] = useState(null);
-    const [major, setMajor] = useState("")*/
-
-    const [email, setEmail] = useState("201921002@sangmyung.kr");
-    const [nickname, setNickname] = useState("bak3839");
-    const [step, setStep] = useState(3);
-    const [gender, setGender] = useState(1);
-    const [major, setMajor] = useState("소프트웨어");
+    const [major, setMajor] = useState("")
 
     const value = useMemo(() => ({email, nickname, step, gender, setStep, setEmail, setNickname, setGender}),
         [email, nickname, step, gender, setStep, setEmail, setNickname, setGender]);
 
     useEffect(() => {
-        if (step === 4) {
+        if (step === 1000) { // step 바꾸기
             console.log("axios run");
             
             async function fetchData() {
@@ -46,6 +42,7 @@ const Register = () => {
                     });
 
                     console.log(res);
+                    console.log(nickname);
                 } catch (error) {
                     console.error(error);
                 }
@@ -60,7 +57,9 @@ const Register = () => {
             {step === 1 ? <Email></Email> : null}
             {step === 2 ? <Code></Code> : null}
             {step === 3 ? <Nickname></Nickname> : null}
-            {step === 4 ? <Gender></Gender> : null}
+            {step === 4 ? <Showname></Showname> : null}
+            {step === 5 ? <Department></Department> : null}
+            {step === 6 ? <Gender></Gender> : null}
         </UserContext.Provider>
     );
 };
