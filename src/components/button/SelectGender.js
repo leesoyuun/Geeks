@@ -21,9 +21,7 @@ const SelectBtn = (props) => {
     return (
         <div className={props.gender === '남자' ? (gender === 1 ? 'gender_box_yellow' : 'gender_box') : (gender === 2 ? 'gender_box_yellow' : 'gender_box')} onClick={ChangeColor}>
             <div className='gender'>{props.gender}</div>
-            <div className='gender_imgs'>
-                <img className='gender_img' src={props.gender === '남자' ? male : female}/>
-            </div>
+            <img className='gender_img' src={props.gender === '남자' ? male : female}/>
         </div>
     )
 }

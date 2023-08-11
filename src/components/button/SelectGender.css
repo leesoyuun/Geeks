@@ -8,6 +8,7 @@
     line-height: 28px;
     cursor: pointer;
     background-color: #F2F4F4;
+    margin-right: 8px;
 }
 
 .gender_box_yellow {
@@ -25,9 +26,8 @@
 .gender{
     margin: 20px 109px 32px 20px;
 }
-.gender_imgs{
-    width: 100%;
-}
+
 .gender_img{
-    margin:auto;
+    display: block;
+    margin: 0 auto;
 }

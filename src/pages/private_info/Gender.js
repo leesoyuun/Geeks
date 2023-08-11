@@ -14,10 +14,12 @@ const Gender = () => {
             <TopBar></TopBar>
             <NumberTitle title={`성별을 알려주세요`} flag = {3}></NumberTitle>
             <div className='gender_select'>
-                <SelectBtn className='male' gender={`남자`}></SelectBtn>
-                <SelectBtn className='female' gender={`여자`}></SelectBtn>
+                <SelectBtn gender={`남자`}></SelectBtn>
+                <SelectBtn gender={`여자`}></SelectBtn>
             </div>
-            <Button content={`다음`}></Button>
+            <div className='content'>
+                <Button content={`다음`}></Button>
+            </div>
         </div>
     );
 };
