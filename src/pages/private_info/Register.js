@@ -21,11 +21,7 @@ export const UserContext = createContext({
 const Register = () => {
     const [email, setEmail] = useState(null);
     const [nickname, setNickname] = useState("");
-<<<<<<< Updated upstream
-    const [step, setStep] = useState(3);
-=======
     const [step, setStep] = useState(1);
->>>>>>> Stashed changes
     const [gender, setGender] = useState(null);
     const [major, setMajor] = useState("")
 

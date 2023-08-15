@@ -16,16 +16,7 @@
     display: flex;
     height: 100%;
     width: 100%;
-    margin-bottom: 11.6%;
     justify-items: center;
-    align-items: flex-end;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 20px;
-
-}
-.test{
-    display: flex;
     align-items: flex-end;
 }
 .input_infos, .input_infos_ID{
