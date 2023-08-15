@@ -21,7 +21,11 @@ export const UserContext = createContext({
 const Register = () => {
     const [email, setEmail] = useState(null);
     const [nickname, setNickname] = useState("");
+<<<<<<< Updated upstream
     const [step, setStep] = useState(3);
+=======
+    const [step, setStep] = useState(1);
+>>>>>>> Stashed changes
     const [gender, setGender] = useState(null);
     const [major, setMajor] = useState("")
 
@@ -31,7 +35,7 @@ const Register = () => {
     useEffect(() => {
         if (step === 1000) { // step 바꾸기
             console.log("axios run");
-            
+
             async function fetchData() {
                 try {
                     const res = await axios.post('http://127.0.0.1:8080/member/register', {

@@ -48,6 +48,9 @@ const Code = () => {
             checkCode();
         }
     };
+    const clickbtn = () =>{
+        setStep(3);
+    }
 
     return (
         <div className='main'>
@@ -69,7 +72,7 @@ const Code = () => {
                     />
                 ))}
             </div>
-            <div className='content'>
+            <div className='content' onClick={clickbtn}>
                 <Button content='코드 확인하기'></Button>
             </div>
         </div>

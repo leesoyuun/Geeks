@@ -9,7 +9,7 @@ const Department = () => {
             <TopBar></TopBar>
             <NumberTitle title={`전공 학과와 학번을 알려주세요`} flag={3}></NumberTitle>
             <div className='input_infos'>
-                <input className='input_info' type='text'/>
+                <input className='input_info_de' type='text'/>
                 <div className='univ'>학과/전공</div>
             </div>
             <div className='input_infos_ID'>

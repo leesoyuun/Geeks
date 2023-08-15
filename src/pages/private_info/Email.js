@@ -41,7 +41,7 @@ const Email = () => {
                 <div className='univ'>@sangmyung.kr</div>
             </div>
             <div className='content' onClick={(e) => handleClick(e)}>
-                <Button classname='test' content='인증 메일 받기'></Button>
+                <Button content='인증 메일 받기'></Button>
             </div>
         </div>
     );
