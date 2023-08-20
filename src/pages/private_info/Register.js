@@ -6,6 +6,7 @@ import Gender from './Gender';
 import axios from "axios";
 import Showname from './Showname';
 import Department from './Department';
+import SmokingStat from './SmokingStat';
 
 export const UserContext = createContext({
     email: null,

@@ -8,8 +8,9 @@ import FinalPage from "./FinalPage";
 import Register from './Register';
 import Gender from './Gender';
 import LiveNumber from "./LiveNumber";
+import SmokingStat from "./SmokingStat";
 
 export { Email, Code, Nickname, Showname, Department, MoreInfo, FinalPage, Register
-,Gender, LiveNumber};
+,Gender, LiveNumber, SmokingStat};
 
 

@@ -1,0 +1,33 @@
+.smoke_stat {
+    margin: 20px 0px 46px 19.52px;
+}
+
+.smoke_img {
+    display: block;
+    margin: 0 auto;
+}
+
+.smoke_box {
+    width: 171px;
+    height: 220px;
+    border-radius: 16px;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px;
+    cursor: pointer;
+    background-color: #F2F4F4;
+    margin-right: 8px;
+}
+
+.smoke_box_yellow {
+    width: 171px;
+    height: 220px;
+    border-radius: 16px;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px;
+    cursor: pointer;
+    background-color: #FFF2DD;
+}
