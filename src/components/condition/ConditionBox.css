@@ -1,0 +1,13 @@
+.condition-box {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    padding: 8px 8px 8px 16px;
+    border-radius: 24px;
+    border: 1px solid #E1E3E3;
+    margin-right: 6px;
+}
+
+.condition-text{
+    margin-right: 2px;
+}

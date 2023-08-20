@@ -1,0 +1,134 @@
+.header {
+    display: flex;
+    margin-top: 44px;
+    align-items: center;
+    justify-content: flex-end;
+    height: 56px;
+}
+
+.findicon {
+    margin-right: 16px;
+}
+
+.guide_box {
+    display: flex;
+    width: 350px;
+    padding: 16px 0px;
+    margin-top: 18px;
+    align-items: center;
+    gap: 8px;
+    border-radius: 16px;
+    background: #FEF2E0;
+    cursor: pointer;
+}
+
+.guide_icon {
+    margin-left: 20px;
+}
+
+.guide {
+    display: flex;
+    align-items: center;
+}
+
+.guide_text {
+    margin-left: 10px;
+    margin-right: 8px;
+    color: #655D4F;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+.condition_boxes {
+    overflow: hidden;
+    margin-top: 33px;
+    display: flex;
+    cursor: pointer;
+}
+
+.dorm_exp {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.dorm_text {
+    color: #5C5F5F;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 18px;
+    margin-left: 6px;
+}
+
+.person_info {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    align-items: flex-start;
+    border-radius: 16px;
+    background: #F8FAFA;
+    margin-top: 24px;
+}
+
+.persons_img {
+    display: flex;
+    width: 310px;
+    margin: 14px 0px 0px 20px;
+}
+
+.user-name {
+    color: #2E3132;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+    margin-bottom: 4px;
+}
+
+.persons {
+    margin-left: 12px;
+    color: #747878;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 18px;
+}
+
+.show_condition {
+    display: flex;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+    margin-bottom: 16px;
+    margin-left: 88px;
+}
+
+.live_num {
+    display: flex;
+    align-items: center;
+    padding: 2px 8px;
+    border-radius: 6px;
+    background: #ECEEEF;
+}
+
+.live_count {
+    margin-left: 6px;
+}
+
+.smoke {
+    margin-left: 4px;
+    display: flex;
+    padding: 2px 8px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    background: #FBEFDD;
+}
+
+.bookmark{
+    margin-left: auto;
+}
