@@ -1,4 +1,4 @@
-.input_info2{
+.livenumbers{
     display: flex;
     margin-top: 60px;
     padding: 7px 0px 8px 0px;
@@ -6,10 +6,17 @@
     color: #C4C7C7;
     font-size: 24px;
     font-weight: 600;
-    width: 100%;
-    font-weight: 600;
-    width: 134px;
+    width: 72px;
+}
+.livenumber{
     border: none;
     outline: none;
-    font-size: 24px;
+    color: #2E3132;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 57.6px; /* 120% */
+}
+.livenumber::-webkit-inner-spin-button {
+    -webkit-appearance: none;
 }
