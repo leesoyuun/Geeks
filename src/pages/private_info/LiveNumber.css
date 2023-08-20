@@ -1,0 +1,15 @@
+.input_info2{
+    display: flex;
+    margin-top: 60px;
+    padding: 7px 0px 8px 0px;
+    border-bottom: 2px solid #C4C7C7;
+    color: #C4C7C7;
+    font-size: 24px;
+    font-weight: 600;
+    width: 100%;
+    font-weight: 600;
+    width: 134px;
+    border: none;
+    outline: none;
+    font-size: 24px;
+}

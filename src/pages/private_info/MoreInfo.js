@@ -5,11 +5,11 @@ import MoreInfoButton from "../../components/more_info/MoreInfo";
 import Button from "../../components/button/Button";
 import "./MoreInfo.css";
 
-const MoreInfo1 = () =>{
+const MoreInfo = () =>{
     return(
         <div className='main'>
             <TopBar></TopBar>
-            <NumberTitle title={`은진 님에 대해\n더 자세히 알려주세요! (1/4)`} flag={4}></NumberTitle>
+            <NumberTitle title={`은진 님에 대해\n더 자세히 알려주세요!`} flag={4}></NumberTitle>
             {/*숙면 파트*/}
             <div className='sub_title'>숙면</div>
             <div className='info_rounds'>
@@ -44,4 +44,4 @@ const MoreInfo1 = () =>{
         </div>
     )
 }
-export default MoreInfo1;
+export default MoreInfo;
