@@ -1,9 +1,8 @@
 .total {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    width: 100%;
-    margin-bottom: 11.6%;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 98px;
+    width: 350px;
     font-weight: 600;
     font-size: 18px;
     line-height: 20px;
@@ -17,14 +16,4 @@
     display: flex;
     justify-content: center; /* 수평 가운데 정렬 */
     align-items: center; /* 수직 가운데 정렬 */
-}
-.ㅅㄷㄴ{
-    display: flex;
-    height: 100%;
-    width: 100%;
-    justify-items: center;
-    align-items: flex-end;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 20px;
 }
