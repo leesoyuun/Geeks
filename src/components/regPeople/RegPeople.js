@@ -1,6 +1,7 @@
 import people from "../../static/img/people.png";
 import {BsBookmark} from "react-icons/bs";
 import React from "react";
+import "./RegPeople.css"
 
 const RegPeople = (props) => {
     return (
@@ -9,7 +10,7 @@ const RegPeople = (props) => {
                 <img className='photo' src={people}/>
                 <div className='persons'>
                     <div className='user-name'>{props.nickname}</div>
-                    <div>{props.major} · {props.email}</div>
+                    <div>{props.major} · {props.email[2]}{props.email[3]}학번</div>
                 </div>
                 <BsBookmark className='bookmark'/>
             </div>
@@ -24,7 +25,7 @@ const RegPeople = (props) => {
                     </svg>
                     <div className='live_count'>{props.exp}</div>
                 </div>
-                <div className='smoke'>{props.smoking}</div>
+                <div className='smoke'>{props.smoking ? "흡연자" : "비흡연자"}</div>
             </div>
         </div>
     )
