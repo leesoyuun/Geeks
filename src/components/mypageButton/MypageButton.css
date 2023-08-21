@@ -1,0 +1,20 @@
+.mypage-button {
+    display: flex;
+    margin: 40px 0px;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.mypage_text {
+    color: #2E3132;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+.arrow-forward{
+    color: #C4C7C7;
+}

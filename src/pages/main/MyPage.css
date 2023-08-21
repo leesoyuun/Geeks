@@ -1,0 +1,58 @@
+.mypage {
+    margin-top: 44px;
+    color: #2E3132;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px;
+    height: 56px;
+}
+
+.edit_profile_btn {
+    display: flex;
+    width: 310px;
+    height: 48px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    background-color: #FFF;
+    color: #2E3132;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+    margin: 0px 20px 22px 20px;
+    cursor: pointer;
+}
+
+.show_profile {
+    margin-top: 22px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.show_profile_title {
+    color: #2E3132;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+.show_profile_sub {
+    margin-top: 9.04px;
+    color: #8E9192;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 16px;
+}
+
+.between-space {
+    display: flex;
+    justify-content: flex-start;
+    width: 390px;
+    height: 12px;
+    background-color: #F2F4F4;
+}

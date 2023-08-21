@@ -1,8 +1,9 @@
 .screen {
     width: 390px;
     overflow: auto;
-    height: 100vh;
+    /*max-height: calc(100vh - 98px);*/
     margin: 0 auto;
+    height: 100vh;
     border: 1px solid #ECEEEF;
 }
 
