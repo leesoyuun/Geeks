@@ -1,13 +1,52 @@
-import React, {useContext} from "react";
+import React, {useContext, useState} from "react";
 import TopBar from "../../components/header/Header";
 import NumberTitle from "../../components/number/Number";
 import MoreInfoButton from "../../components/more_info/MoreInfo";
 import Button from "../../components/button/Button";
 import { UserContext } from './Register';
 import "./MoreInfo.css";
+import axios from "axios";
 
 const MoreInfo = () =>{
-    const {setStep, nickname} = useContext(UserContext);
+    const {setStep, nickname} = useContext(UserContext);   
+ 
+    /*
+    문자열로 넘겨주기
+
+    나머지는 문자열 
+
+    sleep : EARLY, LATE, RADOM >> 기상
+    wakeup : EARLY, LATE, RADOM >> 취침
+    cleaning: CLEAN, DIRTY, BOTH >> 청소
+
+    흡연: boolean
+     */
+
+    const handleClick = (event) => {
+        async function fetchData() {
+            try {
+                const res = await axios.post('http://127.0.0.1:8080/detail/details', {
+                    nickname: "babo",
+                    habits: "10011",
+                    outing: "11011",
+                    prefer: "10000",
+                    sleep: "EARLY",
+                    wakeup: "EARLY",
+                    cleaning: "CLEAN",
+                    exp: 2,
+                    smoking: false
+                });
+
+                console.log(res);
+                console.log(nickname);
+            } catch (error) {
+                console.error(error);
+            }
+        }
+
+        fetchData();
+    };
+
     return(
         <div className='main'>
             <TopBar></TopBar>
@@ -83,7 +122,7 @@ const MoreInfo = () =>{
             <div className='info_rounds'>
                 <MoreInfoButton info={`음식은 밖에서 먹어요`}></MoreInfoButton>
             </div>
-            <div className='content'>
+            <div className='content' onClick={handleClick}>
                 <Button content={`다음`}></Button>
                 <div className='after'>나중에 할래요</div>
             </div>

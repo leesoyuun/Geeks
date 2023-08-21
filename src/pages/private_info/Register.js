@@ -40,6 +40,7 @@ const Register = () => {
                         major: major,
                         nickname: nickname,
                         gender: gender
+                        //exp, smoking 추가하기
                     });
 
                     console.log(res);
@@ -61,6 +62,7 @@ const Register = () => {
             {step === 4 ? <Showname></Showname> : null}
             {step === 5 ? <Department></Department> : null}
             {step === 6 ? <Gender></Gender> : null}
+            {/* TODO 기숙사 경험 + 흡연 여부 페이지 추가 */}
         </UserContext.Provider>
     );
 };
