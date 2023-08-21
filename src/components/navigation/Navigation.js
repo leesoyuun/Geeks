@@ -13,19 +13,19 @@ const Navigation = () => {
 
     return (
         <div className='total_navigation'>
-            <div className={`icons ${selectedIcon === 'home' ? 'selected' : ''}`} onClick={() => handleIconClick('home')}>
+            <div className={`icon ${selectedIcon === 'home' ? 'selected' : ''}`} onClick={() => handleIconClick('home')}>
                 <AiFillHome size="28"/>
                 <div className='icon-text'>홈</div>
             </div>
-            <div className={`icons ${selectedIcon === 'bookmark' ? 'selected' : ''}`} onClick={() => handleIconClick('bookmark')}>
+            <div className={`icon ${selectedIcon === 'bookmark' ? 'selected' : ''}`} onClick={() => handleIconClick('bookmark')}>
                 <RiBookmarkFill size="28"/>
                 <div className='icon-text'>저장</div>
             </div>
-            <div className={`icons ${selectedIcon === 'chat' ? 'selected' : ''}`} onClick={() => handleIconClick('chat')}>
+            <div className={`icon ${selectedIcon === 'chat' ? 'selected' : ''}`} onClick={() => handleIconClick('chat')}>
                 <BsChatLeftFill size="25"/>
                 <div className='icon-text'>대화</div>
             </div>
-            <div className={`icons ${selectedIcon === 'person' ? 'selected' : ''}`} onClick={() => handleIconClick('person')}>
+            <div className={`icon ${selectedIcon === 'person' ? 'selected' : ''}`} onClick={() => handleIconClick('person')}>
                 <BsFillPersonFill size="28"/>
                 <div className='icon-text'>마이</div>
             </div>
