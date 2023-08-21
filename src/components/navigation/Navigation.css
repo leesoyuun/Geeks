@@ -1,8 +1,8 @@
 .total_navigation {
     display: flex;
-    width: 100%;
+    align-items: center;
+    margin: 0 auto;
     height: 100px;
-    align-items: flex-start;
     border-radius: 20px 20px 0px 0px;
     border-top: 1px solid #ECEEEF;
     max-width: 390px;
@@ -13,7 +13,6 @@
 .icons {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
     width: 97.5px;
     height: 76px;
