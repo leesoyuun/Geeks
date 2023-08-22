@@ -2,7 +2,7 @@ import "./App.css"
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
 import { MoreInfo, FinalPage, Register, LiveNumber, SmokingStat} from './pages/private_info';
-import  { Home, MyPage }  from './pages/main';
+import  { Home, MyPage,ProfileView }  from './pages/main';
 function App() {
   return (
     <div>
@@ -15,6 +15,7 @@ function App() {
             <Route path="/MoreInfo" element={<MoreInfo/>}/>
             <Route path="/Home" element={<Home/>}/>
             <Route path='/MyPage' element={<MyPage/>}/>
+            <Route path='/ProfileView' element={<ProfileView/>}/>
         </Routes>
       </Router>
     </div>

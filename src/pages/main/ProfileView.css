@@ -1,0 +1,139 @@
+.profile_header {
+    height: 56px;
+    margin-top: 44px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.other_photo {
+    width: 72px;
+    height: 72px;
+}
+
+.other_profile {
+    display: flex;
+    justify-content: space-between;
+}
+
+.other_chat {
+    width: 148px;
+    height: 48px;
+    border-radius: 16px;
+    border: 1px solid #E1E3E3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2E3132;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+.other_name {
+    margin-top: 15px;
+    color: #2E3132;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+}
+
+. other_major {
+    color: #747878;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px;
+}
+
+.other_condition {
+    display: flex;
+    margin-top: 8px;
+}
+
+.other_live_cnt {
+    display: flex;
+    padding: 2px 8px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    background: #ECEEEF;
+    color: #8E9192;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+    margin-right: 4px;
+}
+
+.other_smoke {
+    display: flex;
+    padding: 2px 8px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    background: #FBEFDD;
+    color: #7F7667;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+}
+
+.other_caution {
+    display: flex;
+    width: 390px;
+    padding: 14px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #FFF8F2;
+    margin-left: -20px;
+    margin-top: 22px;
+}
+
+.other_caution_1 {
+    display: flex;
+}
+
+.other_caution_2 {
+    display: flex;
+    margin-top: 10px;
+}
+
+.other_caution_txt {
+    color: #633F00;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+    margin-left: 6px;
+}
+
+.other_bottom_bar {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    height: 100px;
+    border-radius: 20px 20px 0px 0px;
+    border-top: 1px solid #ECEEEF;
+    max-width: 390px;
+    position: fixed;
+    bottom: 0;
+    padding: 0px 20px;
+}
+
+.other_bookmark {
+    display: flex;
+    flex-direction: column;
+}
+
+.other_bookmark_txt {
+    color: #A9ACAC;
+    text-align: center;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 16px;
+    letter-spacing: 0.5px;
+}
