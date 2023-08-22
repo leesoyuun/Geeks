@@ -1,9 +1,14 @@
 import people from "../../static/img/people.png";
-import {BsBookmark} from "react-icons/bs";
-import React from "react";
+import {BsBookmark,BsBookmarkFill} from "react-icons/bs";
+import React, { useState } from "react";
 import "./RegPeople.css"
 
 const RegPeople = (props) => {
+    const [isBookmarked, setIsBookmarked] = useState(true);
+
+    const toggleBookmark = () => {
+        setIsBookmarked(prevState => !prevState);
+    };
     return (
         <div className='person_info'>
             <div className='persons_img'>
@@ -12,7 +17,8 @@ const RegPeople = (props) => {
                     <div className='user-name'>{props.nickname}</div>
                     <div>{props.major} · {props.email[2]}{props.email[3]}학번</div>
                 </div>
-                <BsBookmark className='bookmark'/>
+                {isBookmarked? <BsBookmark className='bookmark' onClick={toggleBookmark}/> :
+                 <BsBookmarkFill className='bookmark' onClick={toggleBookmark}/>}
             </div>
             {/* 입력한 정보 표시 */}
             <div className='show_condition'>
@@ -28,6 +34,5 @@ const RegPeople = (props) => {
                 <div className='smoke'>{props.smoking ? "흡연자" : "비흡연자"}</div>
             </div>
         </div>
-    )
-}
+    )}
 export default RegPeople
