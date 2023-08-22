@@ -3,6 +3,7 @@ import './Navigation.css';
 import {AiFillHome} from 'react-icons/ai';
 import {RiBookmarkFill} from "react-icons/ri";
 import {BsChatLeftFill, BsFillPersonFill} from 'react-icons/bs';
+import { Link } from 'react-router-dom';
 
 const Navigation = () => {
     const [selectedIcon, setSelectedIcon] = useState('home');
@@ -13,21 +14,29 @@ const Navigation = () => {
 
     return (
         <div className='total_navigation'>
-            <div className={`icon ${selectedIcon === 'home' ? 'selected' : ''}`} onClick={() => handleIconClick('home')}>
-                <AiFillHome size="28"/>
-                <div className='icon-text'>홈</div>
+            <div className={`icon ${selectedIcon === 'home' ? 'selected' : ''}`}>
+                <Link to={'/Home'} onClick={() => handleIconClick('home')}>
+                    <AiFillHome size="28" style={{ fill: selectedIcon === 'home' ? 'black' : 'gray' }}/>
+                    <div className='icon-text'>홈</div>
+                </Link>
             </div>
-            <div className={`icon ${selectedIcon === 'bookmark' ? 'selected' : ''}`} onClick={() => handleIconClick('bookmark')}>
-                <RiBookmarkFill size="28"/>
-                <div className='icon-text'>저장</div>
+            <div className={`icon ${selectedIcon === 'bookmark' ? 'selected' : ''}`}>
+                <Link to={'/Save'} onClick={() => handleIconClick('bookmark')}>
+                    <RiBookmarkFill size="28" style={{ fill: selectedIcon === 'bookmark' ? 'black' : 'gray' }}/>
+                    <div className='icon-text'>저장</div>
+                </Link>
             </div>
-            <div className={`icon ${selectedIcon === 'chat' ? 'selected' : ''}`} onClick={() => handleIconClick('chat')}>
-                <BsChatLeftFill size="25"/>
-                <div className='icon-text'>대화</div>
+            <div className={`icon ${selectedIcon === 'Save' ? 'selected' : ''}`}>
+                <Link to={'/Save'} onClick={() => handleIconClick('Save')}>
+                    <BsChatLeftFill size="25" style={{ fill: selectedIcon === 'bookmark' ? 'black' : 'gray' }}/>
+                    <div className='icon-text'>대화</div>
+                </Link>
             </div>
-            <div className={`icon ${selectedIcon === 'person' ? 'selected' : ''}`} onClick={() => handleIconClick('person')}>
-                <BsFillPersonFill size="28"/>
-                <div className='icon-text'>마이</div>
+            <div className={`icon ${selectedIcon === 'person' ? 'selected' : ''}`}>
+                <Link to={'/MyPage'} onClick={() => handleIconClick('person')}>
+                    <BsFillPersonFill size="28" style={{ fill: selectedIcon === 'bookmark' ? 'black' : 'gray' }}/>
+                    <div className='icon-text'>마이</div>
+                </Link>
             </div>
         </div>
     );

@@ -1,3 +1,7 @@
+a{
+    text-decoration: none;
+}
+
 .total_navigation {
     display: flex;
     align-items: center;
@@ -16,7 +20,7 @@
     align-items: center;
     width: 97.5px;
     height: 76px;
-    color: #A9ACAC;
+    
     cursor: pointer;
 }
 
@@ -28,7 +32,10 @@
     margin-top: 4px;
 }
 
-.icon.selected {
+.test{
+    color: #A9ACAC;
+}
+
+.test .selected {
     color: #3F2E00;
-    display: flex;
 }
