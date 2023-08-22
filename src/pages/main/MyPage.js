@@ -11,7 +11,8 @@ import './MyPage.css';
 const MyPage = () => {
     return (
         <div className='screen'>
-            <div className='screen_content'>
+            <div className='sub_screen'>
+                <div className='screen_content'>
                 <div className='mypage'>마이</div>
                 {/* introduce self*/}
                 <div className='person_info'>
@@ -54,6 +55,7 @@ const MyPage = () => {
                 <MypageButton mypagetxt={`공지사항`}/>
             </div>
             <Navigation/>
+            </div>
         </div>
     )
 }

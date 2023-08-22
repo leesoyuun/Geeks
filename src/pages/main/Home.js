@@ -30,7 +30,8 @@ const Home = () => {
 
     return (
         <div className='screen'>
-            <div className='screen_content'>
+            <div className='sub_screen'>
+                <div className='screen_content'>
                 <div className='header'>
                     <AiOutlineSearch size='25' className='findicon' />
                     <IoMdNotificationsOutline size='28' />
@@ -68,13 +69,13 @@ const Home = () => {
                     <div className='dorm_text'>기숙사 경험</div>
                 </div>
                 {/* people infomation */}
-                
+
                 {member.map((info) => (
                     <RegPeople nickname={info.nickname} major={info.major} email={info.email} exp={info.exp} smoking={info.smoking} />
                 ))}
             </div>
-
             <Navigation />
+            </div>
         </div>
     )
 }
