@@ -1,0 +1,8 @@
+.condition-sub-box{
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 1px solid #E1E3E3;
+    background: #FFF;
+    width: max-content;
+    margin-top: 8px;
+}

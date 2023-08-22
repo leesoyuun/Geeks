@@ -1,0 +1,21 @@
+.condition-boxes{
+    padding: 16px;
+    border-radius: 16px;
+    background: #F9F9F9;
+    margin-top: 16px;
+}
+
+.condition_name{
+    color:#5C5F5F;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+    display: inline-block;
+}
+
+.contions{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 4px;
+}

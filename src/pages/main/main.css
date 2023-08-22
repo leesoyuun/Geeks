@@ -1,6 +1,5 @@
 .screen {
     width: 390px;
-    overflow-x: hidden;
     height: 100vh;
     border: 1px solid #ECEEEF;
     margin: 0 auto;
@@ -9,6 +8,7 @@
 
 .sub_screen{
     overflow-y: auto;
+    overflow-x: hidden;
     height: calc(100vh - 98px);
 
 }

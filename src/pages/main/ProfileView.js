@@ -3,6 +3,7 @@ import MypageButton from "../../components/mypageButton/MypageButton";
 import people from '../../static/img/people.png';
 import {IoIosArrowBack} from "react-icons/io";
 import {RiErrorWarningFill} from "react-icons/ri";
+import ConditionBox from '../../components/conditionBox/ConditionBox';
 import './main.css';
 import './ProfileView.css';
 
@@ -53,12 +54,12 @@ const ProfileView = () => {
                             <div className='other_caution_txt'>잠버릇 심하신 분들 정중히 사양합니다 ㅠㅠ</div>
                         </div>
                     </div>
-                    <MypageButton mypagetxt={`생활 습관 수정하기`}/>
-                    <MypageButton mypagetxt={`룸메이트 신청 목록`}/>
-                    <div className='between-space'></div>
-                    <MypageButton mypagetxt={`재학생 인증하기`}/>
-                    <MypageButton mypagetxt={`알림 설정`}/>
-                    <MypageButton mypagetxt={`공지사항`}/>
+
+                    {/* 조건 목록 */}
+                    <ConditionBox ConditionName={'숙면'}/>
+                    <ConditionBox ConditionName={'취침'}/>
+                    <ConditionBox ConditionName={'기상'}/>
+                    
                 </div>
                 {/* 여기에 하단 바 추가*/}
                 <div className='other_bottom_bar'>
@@ -70,7 +71,7 @@ const ProfileView = () => {
                         </svg>
                         <div className='other_bookmark_txt'>저장</div>
                     </div>
-
+                    <div className='rommate_btn'>룸메이트 신청하기</div>
                 </div>
             </div>
         </div>
