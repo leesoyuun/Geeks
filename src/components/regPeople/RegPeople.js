@@ -1,14 +1,44 @@
 import people from "../../static/img/people.png";
 import {BsBookmark,BsBookmarkFill} from "react-icons/bs";
-import React, { useState } from "react";
-import "./RegPeople.css"
+import React, { useEffect, useRef, useState } from "react";
+import "./RegPeople.css";
+import axios from "axios";
 
 const RegPeople = (props) => {
-    const [isBookmarked, setIsBookmarked] = useState(true);
+    const [isBookmarked, setIsBookmarked] = useState(null);
+    const isMounted = useRef(0);
 
     const toggleBookmark = () => {
-        setIsBookmarked(prevState => !prevState);
+        setIsBookmarked(!isBookmarked);
     };
+
+    useEffect(() => {
+        setIsBookmarked(props.save);
+    }, [])
+
+    useEffect(() => { 
+        if(isMounted.current > 2) {
+            if(isBookmarked) {
+                async function fetchData() {
+
+                    try {
+                        const res = await axios.get('http://127.0.0.1:8080/savelist/saved?myId=' + 1 + '&otherId=' + props.id);
+                        console.log(res);
+                    } catch (error) {
+                        console.error(error);
+                    }
+                }
+        
+                fetchData();
+                console.log("axios");
+            }
+        }
+
+        else {
+            isMounted.current += 1;
+        }
+    }, [isBookmarked])
+
     return (
         <div className='person_info'>
             <div className='persons_img'>
@@ -17,8 +47,8 @@ const RegPeople = (props) => {
                     <div className='user-name'>{props.nickname}</div>
                     <div>{props.major} · {props.email[2]}{props.email[3]}학번</div>
                 </div>
-                {isBookmarked? <BsBookmark className='bookmark' onClick={toggleBookmark}/> :
-                 <BsBookmarkFill className='bookmark' onClick={toggleBookmark}/>}
+                {isBookmarked? <BsBookmarkFill className='bookmark' onClick={toggleBookmark}/> :
+                <BsBookmark className='bookmark' onClick={toggleBookmark}/>}
             </div>
             {/* 입력한 정보 표시 */}
             <div className='show_condition'>

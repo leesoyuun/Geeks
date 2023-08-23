@@ -10,7 +10,9 @@ import './main.css';
 import './Home.css'
 
 const Home = () => {
+    const [tmp, setTmp] = useState([]);
     const [member, setMember] = useState([]);
+    const [saved, setSaved] = useState([]);
 
     useEffect(() => {
         async function fetchData() {
@@ -18,8 +20,7 @@ const Home = () => {
             try {
                 const res = await axios.post('http://127.0.0.1:8080/home/info');
                 console.log(res);
-                setMember(res.data); // ==> member = res.data;               
-                console.log(member);
+                setTmp(res.data); // ==> member = res.data;               
             } catch (error) {
                 console.error(error);
             }
@@ -27,6 +28,28 @@ const Home = () => {
 
         fetchData();
     }, [])
+
+    useEffect(() => {
+        if(tmp.length == 0) return;       
+
+        async function fetchData() {
+            try {
+                const res = await axios.get('http://127.0.0.1:8080/savelist/userIdList?id=' + 1);
+                console.log(res);
+                setSaved(res.data);
+                setMember(tmp);
+            } catch (error) {
+                console.error(error);
+            }
+        }
+
+        fetchData();
+
+    }, [tmp])
+
+    useEffect(() => {
+        console.log(saved);
+    }, [saved])
 
     return (
         <div className='screen'>
@@ -70,8 +93,9 @@ const Home = () => {
                 </div>
                 {/* people infomation */}
 
-                {member.map((info) => (
-                    <RegPeople nickname={info.nickname} major={info.major} email={info.email} exp={info.exp} smoking={info.smoking} />
+                {member?.map((info) => (
+                    info.id === 1 ? null : 
+                    <RegPeople nickname={info.nickname} major={info.major} email={info.email} exp={info.exp} smoking={info.smoking} id={info.id} save={saved?.includes(info.id)}/>                    
                 ))}
             </div>
             <Navigation />
