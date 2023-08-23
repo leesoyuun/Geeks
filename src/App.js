@@ -1,7 +1,7 @@
 import "./App.css"
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import { MoreInfo, FinalPage, Register, LiveNumber, SmokingStat} from './pages/private_info';
-import  { Home, MyPage,ProfileView, Save }  from './pages/main';
+import  { Home, MyPage,ProfileView, Save, Chat }  from './pages/main';
 
 function App() {
   return (
@@ -17,6 +17,7 @@ function App() {
             <Route path='/MyPage' element={<MyPage/>}/>
             <Route path='/ProfileView' element={<ProfileView/>}/>
             <Route path='/Save' element={<Save/>}/>
+            <Route path='/Chat' element={<Chat/>}/>
         </Routes>
       </Router>
     </div>

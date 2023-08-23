@@ -26,8 +26,8 @@ const Navigation = () => {
                     <div className='icon-text'>저장</div>
                 </Link>
             </div>
-            <div className={`icon ${selectedIcon === 'Save' ? 'selected' : ''}`}>
-                <Link to={'/Save'} onClick={() => handleIconClick('Save')}>
+            <div className={`icon ${selectedIcon === 'Chat' ? 'selected' : ''}`}>
+                <Link to={'/Chat'} onClick={() => handleIconClick('Chat')}>
                     <BsChatLeftFill size="25" style={{ fill: selectedIcon === 'bookmark' ? 'black' : 'gray' }}/>
                     <div className='icon-text'>대화</div>
                 </Link>

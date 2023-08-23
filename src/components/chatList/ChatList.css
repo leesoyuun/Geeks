@@ -1,0 +1,41 @@
+.chatlist-box{
+    padding: 16px 0px;
+    cursor: pointer;
+    border-bottom:1px solid #F2F4F4;
+}
+
+.chatlist-content{
+    display: flex;
+}
+
+.chatlist-txt{
+    margin-left: 12px;
+    width: 100%;
+}
+
+.chatlist-info{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.chatlist-name{
+    color:#2E3132;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+}
+
+.chatlist-day{
+    color: #A9ACAC;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+}
+
+.chatlist-chat{
+    color:#2E3132;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+}
