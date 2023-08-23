@@ -26,7 +26,7 @@ const ProfileView = () => {
                         <div className='basic_info'>
                             <img className='other_photo' src={people}/>
                             <div className='other_name'>이소윤</div>
-                            <div className='other_major'>인더스트리디자인 · 19학번</div>
+                            <div className='profile_other_major'>인더스트리디자인 · 19학번</div>
                             <div className='other_condition'>
                                 <div className='other_live_cnt'>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
@@ -59,6 +59,9 @@ const ProfileView = () => {
                     <ConditionBox ConditionName={'숙면'}/>
                     <ConditionBox ConditionName={'취침'}/>
                     <ConditionBox ConditionName={'기상'}/>
+                    <ConditionBox ConditionName={'외출'}/>
+                    <ConditionBox ConditionName={'청소'}/>
+                    <ConditionBox ConditionName={'성향'}/>
                     
                 </div>
                 {/* 여기에 하단 바 추가*/}
