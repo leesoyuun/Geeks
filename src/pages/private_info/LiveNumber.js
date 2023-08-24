@@ -1,10 +1,14 @@
-import React, {useState} from "react";
+import React, {useState, useContext} from "react";
+import { UserContext } from "./Register";
 import TopBar from "../../components/header/Header";
 import NumberTitle from "../../components/number/Number";
 import Button from "../../components/button/Button";
 import './LiveNumber.css';
+
 const LiveNumber = () => {
     const [checknum, setchecknum] = useState('');
+    const {setExp, setStep} = useContext(UserContext);
+
     const checkNum = (e) => {
         const value = e.target.value;
 
@@ -12,6 +16,12 @@ const LiveNumber = () => {
             setchecknum(value);
         }
     }
+
+    const handleClick = () => {
+        setExp(checknum);
+        setStep(8);
+    }
+
     return (
         <div className='main'>
             <TopBar></TopBar>
@@ -21,7 +31,7 @@ const LiveNumber = () => {
                        value={checknum}
                        onChange={checkNum}/>
             </div>
-            <div className='content'>
+            <div className='content' onClick={handleClick}>
                 <Button content='인증 메일 받기'></Button>
             </div>
         </div>

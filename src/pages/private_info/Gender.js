@@ -7,7 +7,11 @@ import "./Gender.css"
 import { UserContext } from "./Register";
 
 const Gender = () => {
-
+    const {setStep} = useContext(UserContext);
+    
+    const handleClick = () => {
+        setStep(7);
+    }
 
     return (
         <div className='main'>
@@ -17,7 +21,7 @@ const Gender = () => {
                 <SelectBtn gender={`남자`}></SelectBtn>
                 <SelectBtn gender={`여자`}></SelectBtn>
             </div>
-            <div className='content'>
+            <div className='content' onClick={handleClick}>
                 <Button content={`다음`}></Button>
             </div>
         </div>

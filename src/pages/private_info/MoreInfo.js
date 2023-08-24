@@ -4,11 +4,30 @@ import NumberTitle from "../../components/number/Number";
 import MoreInfoButton from "../../components/more_info/MoreInfo";
 import Button from "../../components/button/Button";
 import { UserContext } from './Register';
+import { Link } from 'react-router-dom';
 import "./MoreInfo.css";
 import axios from "axios";
 
 const MoreInfo = () =>{
-    const {setStep, nickname} = useContext(UserContext);   
+    const {nickname} = useContext(UserContext);
+    
+    const [sleep, setSleep] = useState([
+        { id: 1, name: "일찍 자요", checked: false },
+        { id: 2, name: "늦게 자요", checked: false },
+        { id: 3, name: "때마다 달라요", checked: false }
+    ]);
+
+    const handleCheckboxChange = (changedCheckboxId) => {
+        const updatedCheckboxes = sleep.map((checkbox) => {
+            if (checkbox.id === changedCheckboxId) {
+                return { ...checkbox, checked: true };
+            } else {
+                return { ...checkbox, checked: false };
+            }
+        });
+
+        setSleep(updatedCheckboxes);
+    };
  
     /*
     문자열로 넘겨주기
@@ -22,14 +41,14 @@ const MoreInfo = () =>{
     흡연: boolean
      */
 
-    const handleClick = (event) => {
+    const handleClick = () => {
         async function fetchData() {
             try {
                 const res = await axios.post('http://127.0.0.1:8080/detail/details', {
-                    nickname: "babo",
+                    nickname: nickname,
                     habits: "10011",
-                    outing: "11011",
-                    prefer: "10000",
+                    outing: "110110",
+                    prefer: "1000",
                     sleep: "EARLY",
                     wakeup: "EARLY",
                     cleaning: "CLEAN",
@@ -63,15 +82,24 @@ const MoreInfo = () =>{
                 <MoreInfoButton info={`귀가 밝아요`}></MoreInfoButton>
                 <MoreInfoButton info={`귀가 어두워요`}></MoreInfoButton>
             </div>
+
             <div className='line'></div>
+
             {/*취침 파트*/}
             <div className='sub_title'>취침</div>
             <div className='info_rounds'>
-                <MoreInfoButton info={`일찍 자요`}></MoreInfoButton>
+                {sleep.map((checkbox) => (
+                    <div onClick={() => handleCheckboxChange(checkbox.id)}>
+                        <MoreInfoButton info={checkbox.name} checked={checkbox.checked}></MoreInfoButton>
+                    </div>
+                ))}
+                {/* <MoreInfoButton info={`일찍 자요`}></MoreInfoButton>
                 <MoreInfoButton info={`늦게 자요`}></MoreInfoButton>
-                <MoreInfoButton info={`때마다 달라요`}></MoreInfoButton>
+                <MoreInfoButton info={`때마다 달라요`}></MoreInfoButton> */}
             </div>
+
             <div className='line'></div>
+            
             {/*기상 파트*/}
             <div className='sub_title'>기상</div>
             <div className='info_rounds'>
@@ -123,10 +151,10 @@ const MoreInfo = () =>{
                 <MoreInfoButton info={`음식은 밖에서 먹어요`}></MoreInfoButton>
             </div>
             <div className='content' onClick={handleClick}>
-                <Button content={`다음`}></Button>
-                <div className='after'>나중에 할래요</div>
+                <Button content={`다음`}></Button>              
             </div>
 
+            <Link to={'/FinalPage'}><div className='after'>나중에 할래요</div></Link>
         </div>
     )
 }

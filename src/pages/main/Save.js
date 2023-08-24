@@ -1,10 +1,29 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Navigation from '../../components/navigation/Navigation';
 import RegPeople from '../../components/regPeople/RegPeople';
 import './main.css';
 import './Save.css';
+import axios from 'axios';
 
 const Save = () => {
+    const [member, setMember] = useState([]);
+
+    useEffect(() => {
+        async function fetchData() {
+
+            try {
+                const res = await axios.get('http://127.0.0.1:8080/savelist/myList?id=' + 1);
+                console.log(res);
+                setMember(res.data);
+                console.log(member);
+            } catch (error) {
+                console.error(error);
+            }
+        }
+
+        fetchData();
+    }, [])
+
     return (
         <div className='screen'>
             <div className='sub_screen'>
@@ -27,13 +46,16 @@ const Save = () => {
                     </div>
                     {/* 총 명수 및 편집 버튼 */}
                     <div className='save_min_header'>
-                        <div>총 3명</div>
+                        <div>총 {member.length}명</div>
                         <div>편집</div>
                     </div>
                     {/* 내가 저장한 사람들의 목록 */}
-                    <RegPeople nickname={'이소윤'} major={'커뮤니케이션디자인'} email={'20학번'} exp={'2'} smoking={'흡연자'}/>
+                    {/* <RegPeople nickname={'이소윤'} major={'커뮤니케이션디자인'} email={'20학번'} exp={'2'} smoking={'흡연자'} /> */}
+                    {member.map((info) => (
+                        <RegPeople nickname={info.nickname} major={info.major} email={info.email} exp={info.exp} smoking={info.smoking} />
+                    ))}
                 </div>
-                <Navigation/>
+                <Navigation />
             </div>
         </div>
     )
