@@ -10,7 +10,20 @@
     overflow-y: auto;
     overflow-x: hidden;
     height: calc(100vh - 98px);
+}
 
+.sub_screen::-webkit-scrollbar {
+    width: 10px; 
+}
+
+
+.sub_screen::-webkit-scrollbar-thumb {
+    background: #C1C1C1; /* 스크롤바의 색상 */
+    
+    border-radius: 10px;
+}
+.sub_screen::-webkit-scrollbar-track {
+    background: #fff;
 }
 
 .screen_content{
