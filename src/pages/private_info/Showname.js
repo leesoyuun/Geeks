@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import TopBar from "../../components/header/Header";
 import NumberTitle from "../../components/number/Number";
 import Button from "../../components/button/Button";
@@ -6,6 +6,7 @@ import { UserContext } from "./Register";
 
 const Showname = () => {
   const { setStep, nickname } = useContext(UserContext);
+  const [buttonColor, setButtonColor] = useState('yellow_btn_color');
   const nextPage = () => {
     setStep(5);
   };
@@ -23,7 +24,7 @@ const Showname = () => {
           ></NumberTitle>
         </div>
         <div className="private_bottom" onClick={nextPage}>
-          <Button content="다음"></Button>
+          <Button content="다음" name={buttonColor}></Button>
         </div>
       </div>
     </div>
