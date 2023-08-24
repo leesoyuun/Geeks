@@ -50,10 +50,10 @@ const Save = () => {
                         <div>편집</div>
                     </div>
                     {/* 내가 저장한 사람들의 목록 */}
-                    {/* <RegPeople nickname={'이소윤'} major={'커뮤니케이션디자인'} email={'20학번'} exp={'2'} smoking={'흡연자'} /> */}
-                    {member.map((info) => (
+                    <RegPeople nickname={'이소윤'} major={'커뮤니케이션디자인'} email={'20'} exp={'2'} smoking={'흡연자'} save={true}/>
+                    {/* {member.map((info) => (
                         <RegPeople nickname={info.nickname} major={info.major} email={info.email} exp={info.exp} smoking={info.smoking} />
-                    ))}
+                    ))} */}
                 </div>
                 <Navigation />
             </div>

@@ -9,7 +9,7 @@ const RegPeople = (props) => {
     const isMounted = useRef(0);
 
     const toggleBookmark = () => {
-        setIsBookmarked(!isBookmarked);
+        setIsBookmarked(prevState => !prevState);
     };
 
     useEffect(() => {
