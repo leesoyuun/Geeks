@@ -16,26 +16,26 @@ const Navigation = (props) => {
         <div className='total_navigation'>
             <div className='icon'>
                 <Link to={'/Home'} onClick={() => handleIconClick('home')}>
-                    <AiFillHome size="28" style={{ fill: props.icon === 'home' ? 'black' : 'gray' }}/>
-                    <div className='icon-text'>홈</div>
+                    <AiFillHome size="28" style={{ fill: props.icon === 'home' ? '#3F2E00' : '#A9ACAC' }}/>
+                    <div className='icon-text' style={{ color: props.icon === 'home' ? '#3F2E00' : '#A9ACAC' }}>홈</div>
                 </Link>
             </div>
             <div className='icon'>
                 <Link to={'/Save'} onClick={() => handleIconClick('bookmark')}>
-                    <RiBookmarkFill size="28" style={{ fill: props.icon === 'bookmark' ? 'black' : 'gray' }}/>
-                    <div className='icon-text'>저장</div>
+                    <RiBookmarkFill size="28" style={{ fill: props.icon === 'bookmark' ? '#3F2E00' : '#A9ACAC' }}/>
+                    <div className='icon-text' style={{ color: props.icon === 'bookmark' ? '#3F2E00' : '#A9ACAC' }}>저장</div>
                 </Link>
             </div>
             <div className='icon'>
                 <Link to={'/Chat'} onClick={() => handleIconClick('Chat')}>
-                    <BsChatLeftFill size="25" style={{ fill: props.icon === 'chat' ? 'black' : 'gray' }}/>
-                    <div className='icon-text'>대화</div>
+                    <BsChatLeftFill size="25" style={{ fill: props.icon === 'chat' ? '#3F2E00' : '#A9ACAC' }}/>
+                    <div className='icon-text' style={{ color: props.icon === 'chat' ? '#3F2E00' : '#A9ACAC' }}>대화</div>
                 </Link>
             </div>
             <div className='icon'>
                 <Link to={'/MyPage'} onClick={() => handleIconClick('person')}>
-                    <BsFillPersonFill size="28" style={{ fill: props.icon === 'person' ? 'black' : 'gray' }}/>
-                    <div className='icon-text'>마이</div>
+                    <BsFillPersonFill size="28" style={{ fill: props.icon === 'person' ? '#3F2E00' : '#A9ACAC' }}/>
+                    <div className='icon-text' style={{ color: props.icon === 'person' ? '#3F2E00' : '#A9ACAC' }}>마이</div>
                 </Link>
             </div>
         </div>
