@@ -23,7 +23,7 @@ const MoreInfo = () => {
      */
 
   const { nickname } = useContext(UserContext);
-
+  const [buttonColor,setButtonColor] = useState('gray_btn_color');
   const [list, setList] = useState([]);
   const [type, setType] = useState("");
 
@@ -292,7 +292,7 @@ const MoreInfo = () => {
         </div>
         <div className="private_bottom">
           <div onClick={handleClick}>
-            <Button content={`다음`}></Button>
+            <Button content={`다음`} name={buttonColor}></Button>
           </div>
           <Link to={"/FinalPage"}>
             <div className="after">나중에 할래요</div>

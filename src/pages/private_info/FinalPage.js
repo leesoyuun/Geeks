@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "../../components/button/Button";
 import picture1 from "../../static/img/finalpage.png";
 import "./FinalPage.css";
 
 const FinalPage = () => {
+    const [buttonColor, setButtonColor] = useState('yellow_btn_color');
+
   return (
     <div className="screen">
       <div className="sub_screen">
@@ -17,7 +19,7 @@ const FinalPage = () => {
           <img src={picture1} />
         </div>
         <div className="private_bottom">
-          <Button content={`룸메이트 찾으러 가기`}></Button>
+          <Button content={`룸메이트 찾으러 가기`} name={buttonColor}></Button>
         </div>
       </div>
     </div>
