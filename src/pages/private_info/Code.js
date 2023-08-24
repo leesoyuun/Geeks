@@ -8,7 +8,7 @@ import "./Code.css";
 
 const Code = () => {
   const inputRefs = [useRef(), useRef(), useRef(), useRef()];
-
+  const [name, setName] = useState('gray_btn_color');
   const { email, setStep } = useContext(UserContext);
   let num = "";
 
@@ -45,6 +45,9 @@ const Code = () => {
 
     if (num.length == 4) {
       checkCode();
+      setName('yellow_btn_color')
+    } else{
+        setName('gray_btn_color')
     }
   };
   const clickbtn = () => {
@@ -58,8 +61,7 @@ const Code = () => {
           <TopBar></TopBar>
           <NumberTitle
             title={`수신된 메일에 적힌\n4자리 코드를 입력해 주세요.`}
-            flag={1}
-          ></NumberTitle>
+            flag={1}></NumberTitle>
           <div className="email_send">
             <div className="email_send_txt">메일이 도착하지 않았나요?</div>
             <button className="email_resend">인증 메일 재전송</button>
@@ -79,7 +81,7 @@ const Code = () => {
         </div>
         <div className="private_bottom">
           <div onClick={clickbtn}>
-            <Button content="코드 확인하기"></Button>
+            <Button content="코드 확인하기" name={name}></Button>
           </div>
         </div>
       </div>
