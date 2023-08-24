@@ -7,6 +7,7 @@ import "./LiveNumber.css";
 
 const LiveNumber = () => {
   const [checknum, setchecknum] = useState("");
+  const [buttonColor, setButtonColor] = useState('gray_btn_color');
   const { setExp, setStep } = useContext(UserContext);
 
   const checkNum = (e) => {
@@ -15,6 +16,8 @@ const LiveNumber = () => {
     if (/^\d{0,2}$/.test(value)) {
       setchecknum(value);
     }
+
+    value > 0 ? setButtonColor('yellow_btn_color') : setButtonColor('gray_btn_color');
   };
 
   const handleClick = () => {
@@ -41,7 +44,7 @@ const LiveNumber = () => {
           </div>
         </div>
         <div className="private_bottom" onClick={handleClick}>
-          <Button content="인증 메일 받기"></Button>
+          <Button content="인증 메일 받기" name={buttonColor}></Button>
         </div>
       </div>
     </div>
