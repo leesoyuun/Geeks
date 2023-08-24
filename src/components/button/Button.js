@@ -2,10 +2,10 @@ import React,{ useState } from "react";
 import "./Button.css";
 
 const button = (props) =>{
-
+    // page
     return(
         <div className='total'>
-            <div className='round_btn'>{props.content}</div>
+        <div className={props.name}>{props.content}</div>
         </div>
 
     )

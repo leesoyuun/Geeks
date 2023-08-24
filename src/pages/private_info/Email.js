@@ -11,6 +11,7 @@ const Email = () => {
   const emailRef = useRef("");
   const { setStep, setEmail, setNickname } = useContext(UserContext);
   const navigate = useNavigate();
+  const [name, setName] = useState('gray_btn_color');
 
   const handleClick = (e) => {
     const newEmail = emailRef.current.value + "@sangmyung.kr";
@@ -31,6 +32,11 @@ const Email = () => {
 
     fetchEmail();
   };
+  
+  const ChangeBtnColor = () =>{
+    emailRef.current.value.length === 9 ? setName('yellow_btn_color') : setName('gray_btn_color')
+  }
+
 
   return (
     <div className="screen">
@@ -42,13 +48,13 @@ const Email = () => {
             flag={1}
           ></NumberTitle>
           <div className="input_infos">
-            <input className="input_info" type="number" ref={emailRef} />
+            <input className="input_info" type="number" maxLength={9} ref={emailRef} onChange={ChangeBtnColor} />
             <div className="univ">@sangmyung.kr</div>
           </div>
         </div>
         <div className="private_bottom">
           <div onClick={(e) => handleClick(e)}>
-            <Button content="인증 메일 받기"></Button>
+            <Button content="인증 메일 받기" name={name}></Button>
           </div>
         </div>
       </div>
