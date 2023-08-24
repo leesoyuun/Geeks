@@ -11,6 +11,7 @@ const Nickname = () => {
   const [NumCount, setNumCount] = useState(0);
   const [name, setName] = useState("");
   const [success, setSuccess] = useState(false);
+  const [buttonColor, setButtonColor] = useState('gray_btn_color');
 
   const { setNickname, setStep } = useContext(UserContext);
 
@@ -28,6 +29,9 @@ const Nickname = () => {
     if (event.target.value.length <= 8) {
       setNumCount(event.target.value.length);
     }
+      
+    // 닉네임 입력시 버튼 색 바뀜
+    event.target.value.length > 0 ? setButtonColor('yellow_btn_color') : setButtonColor('gray_btn_color')
   };
 
   const handleClick = () => {
@@ -72,7 +76,7 @@ const Nickname = () => {
           <div className="nick_cnt">{NumCount}/8</div>
         </div>
         <div className="private_bottom" onClick={handleClick}>
-          <Button content="다음"></Button>
+          <Button content="다음" name={buttonColor}></Button>
         </div>
       </div>
     </div>
