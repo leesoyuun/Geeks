@@ -1,17 +1,19 @@
 import React from "react";
+import { BsCheck2 } from "react-icons/bs";
 import "./Number.css";
 
 const Number = (props) => {
-    return (
-        <div>
-            <div className='total_circle'>
-                <div className={props.flag === 1 ? 'circle' : 'circle_gray'}>1</div>
-                <div className={props.flag === 2 ? 'circle' : 'circle_gray'}>2</div>
-                <div className={props.flag === 3 ? 'circle' : 'circle_gray'}>3</div>
-                <div className={props.flag === 4 ? 'circle' : 'circle_gray'}>4</div>
-            </div>
-            <div className='title_text'>{props.title}</div>
-        </div>
-    )
-}
+  return (
+    <div>
+        <div className="total_circle">
+            {[1, 2, 3, 4].map(number => (
+                <div key={number}>
+                    {props.flag > number ? <div className="circle_gray"><BsCheck2 className="circle_check" /></div> : props.flag === number ? <div className="circle">{number}</div> : <div className="circle_gray">{number}</div>}
+                </div>
+            ))}
+        </div>      
+      <div className="title_text">{props.title}</div>
+    </div>
+  );
+};
 export default Number;
