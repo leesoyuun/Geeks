@@ -53,7 +53,9 @@ const Code = () => {
     }
 
     return (
-        <div className='main'>
+        <div className='screen'>
+            <div className='sub_screen'>
+                <div className='screen_content'>
             <TopBar></TopBar>
             <NumberTitle title={`수신된 메일에 적힌\n4자리 코드를 입력해 주세요.`} flag={1}></NumberTitle>
             <div className='email_send'>
@@ -72,9 +74,13 @@ const Code = () => {
                     />
                 ))}
             </div>
-            <div className='content' onClick={clickbtn}>
+        </div>
+        <div className="private_bottom">
+            <div onClick={clickbtn}>
                 <Button content='코드 확인하기'></Button>
             </div>
+        </div>
+        </div>
         </div>
     );
 }

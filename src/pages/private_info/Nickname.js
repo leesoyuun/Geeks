@@ -52,15 +52,19 @@ const Nickname = () => {
     }
 
     return (
-        <div className='main'>
+        <div className='screen'>
+            <div className='sub_screen'>
+                <div className='screen_content'>
             <TopBar></TopBar>
             <NumberTitle title={`회원님을 표현한\n 닉네임을 알려주세요!`} flag={2}></NumberTitle>
             <input className='input_nick' type='text'
                    maxLength="8" onChange={handleChange}/>
             <div className='nick_cnt'>{NumCount}/8</div>
-            <div className='content' onClick={handleClick}>
-                <Button content='다음'></Button>
-            </div>
+        </div>
+        <div className="private_bottom" onClick={handleClick}>
+            <Button content='다음'></Button>
+        </div>
+        </div>
         </div>
     );
 }

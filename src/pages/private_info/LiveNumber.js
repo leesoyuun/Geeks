@@ -23,7 +23,9 @@ const LiveNumber = () => {
     }
 
     return (
-        <div className='main'>
+        <div className='screen'>
+            <div className='sub_screen'>
+                <div className='screen_content'>
             <TopBar></TopBar>
             <NumberTitle title={`기숙사를 몇 번 생활해 보셨나요?`} flag = {3}></NumberTitle>
             <div className='livenumbers'>
@@ -31,8 +33,10 @@ const LiveNumber = () => {
                        value={checknum}
                        onChange={checkNum}/>
             </div>
-            <div className='content' onClick={handleClick}>
+            </div>
+            <div className='private_bottom' onClick={handleClick}>
                 <Button content='인증 메일 받기'></Button>
+            </div>
             </div>
         </div>
     );

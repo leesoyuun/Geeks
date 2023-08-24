@@ -10,12 +10,16 @@ const Showname = () => {
         setStep(5);
     }
     return(
-        <div className='main'>
+        <div className='screen'>
+            <div className='sub_screen'>
+                <div className='screen_content'>
             <TopBar></TopBar>
             <NumberTitle title={nickname + ` 님 반가워요!\n\n기숙사 생활을 위한 \n몇가지만 여쭤볼게요.`} flag={3}></NumberTitle>
-            <div className='content' onClick={nextPage}>
-                <Button content='다음'></Button>
-            </div>
+        </div>
+        <div className="private_bottom" onClick={nextPage}>
+            <Button content='다음'></Button>
+        </div>
+        </div>
         </div>
     )
 }

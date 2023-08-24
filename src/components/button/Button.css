@@ -1,8 +1,6 @@
 .total {
-    position: absolute;
-    bottom: 0;
-    margin-bottom: 98px;
     width: 350px;
+    margin: 0 auto;
     font-weight: 600;
     font-size: 18px;
     line-height: 20px;

@@ -5,14 +5,17 @@ import "./FinalPage.css";
 
 const FinalPage = () =>{
     return(
-        <div className='main'>
+        <div className='screen'>
+            <div className='sub_screen'>
+                <div className='screen_content'>
             <div className='welcome'>환영합니다!</div>
             <div className='welcome_ment'>이제부터 긱스와 함께<br/>룸메이트를 찾아봐요</div>
             <img src={picture1}/>
-            <div className='content'>
+            </div>
+            <div className='private_bottom'>
                 <Button content={`룸메이트 찾으러 가기`}></Button>
             </div>
-
+            </div>
         </div>
     )
 }

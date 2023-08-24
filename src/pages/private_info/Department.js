@@ -14,7 +14,9 @@ const Department = () => {
     }
 
     return(
-        <div className='main'>
+        <div className='screen'>
+            <div className='sub_screen'>
+                <div className='screen_content'>
             <TopBar></TopBar>
             <NumberTitle title={`전공 학과와 학번을 알려주세요`} flag={3}></NumberTitle>
             <div className='input_infos'>
@@ -25,8 +27,10 @@ const Department = () => {
                 <input className='input_info_ID' type='number'/>
                 <div className='univ'>학번</div>
             </div>
-            <div className='content' onClick={handleClick}>
+            </div>
+            <div className='private_bottom' onClick={handleClick}>
                 <Button content='다음'></Button>
+            </div>
             </div>
         </div>
     );

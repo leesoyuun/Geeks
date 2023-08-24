@@ -6,6 +6,7 @@ import Button from "../../components/button/Button";
 import { UserContext } from './Register';
 import { Link } from 'react-router-dom';
 import "./MoreInfo.css";
+import "./main.css";
 import axios from "axios";
 
 const MoreInfo = () => {
@@ -106,8 +107,10 @@ const MoreInfo = () => {
     };
 
     return (
-        <div className='main'>
-            <TopBar></TopBar>
+        <div className='screen'>
+            <div className='sub_screen'>
+                <div className='screen_content'>
+                <TopBar></TopBar>
             <NumberTitle title={nickname + ` 님의\n생활 습관을 알려주세요!`} flag={4}></NumberTitle>
             <div className='detail_explain'>생활 습관을 등록해야 일부 서비스의 이용이 가능해요</div>
             {/*숙면 파트*/}
@@ -177,12 +180,17 @@ const MoreInfo = () => {
                 <MoreInfoButton info={`혼자 조용히 지내요`}></MoreInfoButton>
                 <MoreInfoButton info={`룸메와 함께 놀고 싶어요`}></MoreInfoButton>
             </div>
-            <div className='content' onClick={handleClick}>
-                <Button content={`다음`}></Button>
             </div>
-
-            <Link to={'/FinalPage'}><div className='after'>나중에 할래요</div></Link>
-        </div>
+            <div className="private_bottom">
+                <div onClick={handleClick}>
+                    <Button content={`다음`}></Button>
+                </div>
+                <Link to={'/FinalPage'}>
+                    <div className='after'>나중에 할래요</div>
+                </Link>
+            </div>
+            </div>
+            </div>
     )
 }
 export default MoreInfo;

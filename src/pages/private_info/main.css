@@ -1,0 +1,25 @@
+.screen {
+    width: 390px;
+    height: 100vh;
+    border: 1px solid #ECEEEF;
+    margin: 0 auto;
+
+}
+
+.sub_screen{
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: calc(100vh - 98px);
+
+}
+
+.screen_content{
+    padding: 0px 20px;
+}
+
+.private_bottom{
+    width: 390px;
+    height: 98px;
+    position: fixed;
+    bottom: 0;
+}

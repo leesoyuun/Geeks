@@ -17,13 +17,6 @@
     margin-top: 28px;
     line-height: 32px;
 }
-.content{
-    display: flex;
-    height: 100%;
-    width: 100%;
-    justify-items: center;
-    align-items: flex-end;
-}
 .input_infos, .input_infos_ID{
     display: flex;
     margin-top: 60px;

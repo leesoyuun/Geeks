@@ -14,15 +14,19 @@ const SmokingStat = () => {
     }
 
     return (
-        <div className='main'>
+        <div className='screen'>
+            <div className='sub_screen'>
+                <div className='screen_content'>
             <TopBar></TopBar>
             <NumberTitle title={`흡연자 이신가요?`} flag = {3}></NumberTitle>
             <div className='gender_select'>
                 <SelectBtnSmoke smokestat={`네`}></SelectBtnSmoke>
                 <SelectBtnSmoke smokestat={`아니요`}></SelectBtnSmoke>
             </div>
-            <div className='content' onClick={handleClick}>
+            </div>
+            <div className='private_bottom' onClick={handleClick}>
                 <Button content={`다음`}></Button>
+            </div>
             </div>
         </div>
     );
