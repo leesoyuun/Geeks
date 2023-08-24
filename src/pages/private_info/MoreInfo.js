@@ -45,12 +45,43 @@ const MoreInfo = () => {
     { id: 3, name: "가끔 있어요", checked: false },
   ]);
 
+  const [ear, setEar] = useState([
+    { id: 1, name: "귀가 밝아요", checked: false },
+    { id: 2, name: "귀가 어두워요", checked: false }
+  ]);
+
+  const [out, setOut] = useState([
+    { id: 1, name: "집순이에요", checked: false },
+    { id: 2, name: "밖순이에요", checked: false }
+  ]);
+
+  const [home, setHome] = useState([
+    { id: 1, name: "본가 자주 가요", checked: false },
+    { id: 2, name: "본가 잘 안가요", checked: false }
+  ]);
+
+  const [clean, setClean] = useState([
+    { id: 1, name: "자주 청소해요", checked: false },
+    { id: 2, name: "더러워지면 청소해요", checked: false },
+    { id: 3, name: "상대에게 맞춰요", checked: false },
+  ]);
+
+  const [prefer, setPrefer] = useState([
+    { id: 1, name: "혼자 조용히 지내요", checked: false },
+    { id: 2, name: "룸메와 함께 놀고 싶어요", checked: false }
+  ]);
+
   const [updatedCheckbox, setUpdatedCheckbox] = useState([]);
 
   useEffect(() => {
     if (type.type === "sleep") setList(sleep);
     else if (type.type === "wake") setList(wake);
     else if (type.type === "habit") setList(habit);
+    else if (type.type === "ear") setList(ear);
+    else if (type.type === "out") setList(out);
+    else if (type.type === "home") setList(home);
+    else if (type.type === "clean") setList(clean);
+    else if (type.type === "prefer") setList(prefer);
   }, [type]);
 
   useEffect(() => {
@@ -69,6 +100,11 @@ const MoreInfo = () => {
     if (type.type === "sleep") setSleep(updatedCheckbox);
     else if (type.type === "wake") setWake(updatedCheckbox);
     else if (type.type === "habit") setHabit(updatedCheckbox);
+    else if (type.type === "ear") setEar(updatedCheckbox);
+    else if (type.type === "out") setOut(updatedCheckbox);
+    else if (type.type === "home") setHome(updatedCheckbox);
+    else if (type.type === "clean") setClean(updatedCheckbox);
+    else if (type.type === "prefer") setPrefer(updatedCheckbox);
   }, [updatedCheckbox]);
 
   const handleCheckboxChange = (changedCheckboxId, type) => {
@@ -119,7 +155,7 @@ const MoreInfo = () => {
             {habit.map((checkbox) => (
               <div
                 onClick={() =>
-                  handleCheckboxChange(checkbox.id, "habit", habit)
+                  handleCheckboxChange(checkbox.id, "habit")
                 }
               >
                 <MoreInfoButton
@@ -131,8 +167,24 @@ const MoreInfo = () => {
             {/* <MoreInfoButton info={`잠버릇 있어요`}></MoreInfoButton>
                 <MoreInfoButton info={`잠버릇 없어요`}></MoreInfoButton>
                 <MoreInfoButton info={`가끔 있어요`}></MoreInfoButton> */}
-            <MoreInfoButton info={`귀가 밝아요`}></MoreInfoButton>
-            <MoreInfoButton info={`귀가 어두워요`}></MoreInfoButton>
+          </div>
+
+          <div className="line"></div>
+
+          <div className="sub_title">밤귀</div>
+          <div className="info_rounds">
+          {ear.map((checkbox) => (
+              <div
+                onClick={() =>
+                  handleCheckboxChange(checkbox.id, "ear")
+                }
+              >
+                <MoreInfoButton
+                  info={checkbox.name}
+                  checked={checkbox.checked}
+                ></MoreInfoButton>
+              </div>
+            ))}
           </div>
 
           <div className="line"></div>
@@ -148,9 +200,6 @@ const MoreInfo = () => {
                 ></MoreInfoButton>
               </div>
             ))}
-            {/* <MoreInfoButton info={`일찍 자요`}></MoreInfoButton>
-                <MoreInfoButton info={`늦게 자요`}></MoreInfoButton>
-                <MoreInfoButton info={`때마다 달라요`}></MoreInfoButton> */}
           </div>
 
           <div className="line"></div>
@@ -171,27 +220,74 @@ const MoreInfo = () => {
           {/*외출 파트*/}
           <div className="sub_title">외출</div>
           <div className="info_rounds">
-            <MoreInfoButton info={`집순이에요`}></MoreInfoButton>
-            <MoreInfoButton info={`밖순이에요`}></MoreInfoButton>
-            <MoreInfoButton info={`약속이 있으면 나가요`}></MoreInfoButton>
-            <MoreInfoButton info={`본가 자주 가요`}></MoreInfoButton>
-            <MoreInfoButton info={`본가 잘 안가요`}></MoreInfoButton>
-            <MoreInfoButton info={`학교에 오래 있어요`}></MoreInfoButton>
+          {out.map((checkbox) => (
+              <div
+                onClick={() =>
+                  handleCheckboxChange(checkbox.id, "out")
+                }
+              >
+                <MoreInfoButton
+                  info={checkbox.name}
+                  checked={checkbox.checked}
+                ></MoreInfoButton>
+              </div>
+            ))}
           </div>
+
+          {/*본가 파트*/}
           <div className="line"></div>
+          <div className="sub_title">본가</div>
+          <div className="info_rounds">
+          {home.map((checkbox) => (
+              <div
+                onClick={() =>
+                  handleCheckboxChange(checkbox.id, "home")
+                }
+              >
+                <MoreInfoButton
+                  info={checkbox.name}
+                  checked={checkbox.checked}
+                ></MoreInfoButton>
+              </div>
+            ))}
+          </div>
+
+          <div className="line"></div>
+
           {/*청소 파트*/}
           <div className="sub_title">청소</div>
           <div className="info_rounds">
-            <MoreInfoButton info={`자주 청소해요`}></MoreInfoButton>
-            <MoreInfoButton info={`더러워지면 청소해요`}></MoreInfoButton>
-            <MoreInfoButton info={`상대에게 맞춰요`}></MoreInfoButton>
+          {clean.map((checkbox) => (
+              <div
+                onClick={() =>
+                  handleCheckboxChange(checkbox.id, "clean")
+                }
+              >
+                <MoreInfoButton
+                  info={checkbox.name}
+                  checked={checkbox.checked}
+                ></MoreInfoButton>
+              </div>
+            ))}
           </div>
+
           <div className="line"></div>
+
           {/*성향 파트*/}
           <div className="sub_title">성향</div>
           <div className="info_rounds">
-            <MoreInfoButton info={`혼자 조용히 지내요`}></MoreInfoButton>
-            <MoreInfoButton info={`룸메와 함께 놀고 싶어요`}></MoreInfoButton>
+          {prefer.map((checkbox) => (
+              <div
+                onClick={() =>
+                  handleCheckboxChange(checkbox.id, "prefer")
+                }
+              >
+                <MoreInfoButton
+                  info={checkbox.name}
+                  checked={checkbox.checked}
+                ></MoreInfoButton>
+              </div>
+            ))}
           </div>
         </div>
         <div className="private_bottom">
