@@ -20,7 +20,7 @@ const RegPeople = (props) => {
         if(isMounted.current > 2) {
             if(isBookmarked) {
                 async function fetchData() {
-
+ 
                     try {
                         const res = await axios.get('http://127.0.0.1:8080/savelist/saved?myId=' + 1 + '&otherId=' + props.id);
                         console.log(res);
