@@ -76,8 +76,6 @@ const MoreInfo = () =>{
             <div className='info_rounds'>
                 <MoreInfoButton info={`잠버릇 있어요`}></MoreInfoButton>
                 <MoreInfoButton info={`잠버릇 없어요`}></MoreInfoButton>
-            </div>
-            <div className='info_rounds'>
                 <MoreInfoButton info={`가끔 있어요`}></MoreInfoButton>
                 <MoreInfoButton info={`귀가 밝아요`}></MoreInfoButton>
                 <MoreInfoButton info={`귀가 어두워요`}></MoreInfoButton>
@@ -105,8 +103,6 @@ const MoreInfo = () =>{
             <div className='info_rounds'>
                 <MoreInfoButton info={`일찍 일어나요`}></MoreInfoButton>
                 <MoreInfoButton info={`늦게 일어나요`}></MoreInfoButton>
-            </div>
-            <div className='info_rounds'>
                 <MoreInfoButton info={`때마다 달라요`}></MoreInfoButton>
             </div>
             <div className='line'></div>
@@ -115,12 +111,8 @@ const MoreInfo = () =>{
             <div className='info_rounds'>
                 <MoreInfoButton info={`집순이에요`}></MoreInfoButton>
                 <MoreInfoButton info={`밖순이에요`}></MoreInfoButton>
-            </div>
-            <div className='info_rounds'>
                 <MoreInfoButton info={`약속이 있으면 나가요`}></MoreInfoButton>
                 <MoreInfoButton info={`본가 자주 가요`}></MoreInfoButton>
-            </div>
-            <div className='info_rounds'>
                 <MoreInfoButton info={`본가 잘 안가요`}></MoreInfoButton>
                 <MoreInfoButton info={`학교에 오래 있어요`}></MoreInfoButton>
             </div>
@@ -130,8 +122,6 @@ const MoreInfo = () =>{
             <div className='info_rounds'>
                 <MoreInfoButton info={`자주 청소해요`}></MoreInfoButton>
                 <MoreInfoButton info={`더러워지면 청소해요`}></MoreInfoButton>
-            </div>
-            <div className='info_rounds'>
                 <MoreInfoButton info={`상대에게 맞춰요`}></MoreInfoButton>
             </div>
             <div className='line'></div>
@@ -140,15 +130,6 @@ const MoreInfo = () =>{
             <div className='info_rounds'>
                 <MoreInfoButton info={`혼자 조용히 지내요`}></MoreInfoButton>
                 <MoreInfoButton info={`룸메와 함께 놀고 싶어요`}></MoreInfoButton>
-            </div>
-            <div className='info_rounds'>
-                <MoreInfoButton info={`전화 통화는 밖에서 해요`}></MoreInfoButton>
-            </div>
-            <div className='info_rounds'>
-                <MoreInfoButton info={`휴대폰은 이어폰을 끼고 사용해요`}></MoreInfoButton>
-            </div>
-            <div className='info_rounds'>
-                <MoreInfoButton info={`음식은 밖에서 먹어요`}></MoreInfoButton>
             </div>
             <div className='content' onClick={handleClick}>
                 <Button content={`다음`}></Button>              
