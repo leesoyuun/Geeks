@@ -1,4 +1,4 @@
-.gender_box {
+.gender_box, .gender_box_yellow  {
     width: 171px;
     height: 220px;
     border-radius: 16px;
@@ -12,19 +12,13 @@
 }
 
 .gender_box_yellow {
-    width: 171px;
-    height: 220px;
-    border-radius: 16px;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 28px;
-    cursor: pointer;
     background-color: #FFF2DD;
+    border: 1px solid #F8BE00;
 }
 
 .gender{
-    margin: 20px 109px 32px 20px;
+    margin: 20px 0px 32px 20px;
+    
 }
 
 .gender_img{

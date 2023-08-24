@@ -7,7 +7,7 @@
     margin: 0 auto;
 }
 
-.smoke_box {
+.smoke_box, .smoke_box_yellow {
     width: 171px;
     height: 220px;
     border-radius: 16px;
@@ -21,13 +21,6 @@
 }
 
 .smoke_box_yellow {
-    width: 171px;
-    height: 220px;
-    border-radius: 16px;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 28px;
-    cursor: pointer;
     background-color: #FFF2DD;
+    border: 1px solid #F8BE00;
 }
