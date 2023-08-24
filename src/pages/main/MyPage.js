@@ -92,7 +92,7 @@ const MyPage = () => {
                 <MypageButton mypagetxt={`알림 설정`}/>
                 <MypageButton mypagetxt={`공지사항`}/>
             </div>
-            <Navigation/>
+            <Navigation icon={'person'}></Navigation>
             </div>
         </div>
     )

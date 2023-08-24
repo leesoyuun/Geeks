@@ -98,7 +98,7 @@ const Home = () => {
                     <RegPeople nickname={info.nickname} major={info.major} email={info.email} exp={info.exp} smoking={info.smoking} id={info.id} save={saved?.includes(info.id)}/>                    
                 ))}
             </div>
-            <Navigation />
+            <Navigation icon={'home'}></Navigation>
             </div>
         </div>
     )

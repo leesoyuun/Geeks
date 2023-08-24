@@ -55,7 +55,7 @@ const Save = () => {
                         <RegPeople nickname={info.nickname} major={info.major} email={info.email} exp={info.exp} smoking={info.smoking} />
                     ))} */}
                 </div>
-                <Navigation />
+                <Navigation icon={'bookmark'}></Navigation>
             </div>
         </div>
     )
