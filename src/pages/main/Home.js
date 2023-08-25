@@ -19,7 +19,6 @@ const Home = () => {
 
             try {
                 const res = await axios.post('http://127.0.0.1:8080/home/info');
-                console.log(res);
                 setTmp(res.data); // ==> member = res.data;               
             } catch (error) {
                 console.error(error);
@@ -34,8 +33,7 @@ const Home = () => {
 
         async function fetchData() {
             try {
-                const res = await axios.get('http://127.0.0.1:8080/savelist/userIdList?id=' + 1);
-                console.log(res);
+                const res = await axios.get('http://127.0.0.1:8080/savelist/userIdList?id=' + 10);
                 setSaved(res.data);
                 setMember(tmp);
             } catch (error) {
@@ -46,10 +44,6 @@ const Home = () => {
         fetchData();
 
     }, [tmp])
-
-    useEffect(() => {
-        console.log(saved);
-    }, [saved])
 
     return (
         <div className='screen'>
@@ -65,7 +59,7 @@ const Home = () => {
                         <svg className='guide_icon' xmlns="http://www.w3.org/2000/svg" width="36" height="36"
                             viewBox="0 0 36 36" fill="none">
                             <circle cx="18" cy="18" r="18" fill="#EDE1CF" />
-                            <path fill-rule="evenodd" clip-rule="evenodd"
+                            <path fillRule="evenodd" clipRule="evenodd"
                                 d="M12.2992 9.90033C11.4707 9.90033 10.7992 10.5719 10.7992 11.4003V21.6003H15.5987C16.4272 21.6003 17.0987 22.2719 17.0987 23.1003L17.0987 27.9003L23.6992 27.9003C24.5276 27.9003 25.1992 27.2288 25.1992 26.4003V11.4003C25.1992 10.5719 24.5276 9.90033 23.6992 9.90033H12.2992Z"
                                 fill="#B4AA99" />
                             <path
@@ -94,8 +88,8 @@ const Home = () => {
                 {/* people infomation */}
 
                 {member?.map((info) => (
-                    info.id === 1 ? null : 
-                    <RegPeople nickname={info.nickname} major={info.major} email={info.email} exp={info.exp} smoking={info.smoking} id={info.id} save={saved?.includes(info.id)}/>                    
+                    info.id === 10 ? null : 
+                    <RegPeople key={info.id} nickname={info.nickname} major={info.major} email={info.email} exp={info.exp} smoking={info.smoking} id={info.id} save={saved?.includes(info.id)}/>                    
                 ))}
             </div>
             <Navigation icon={'home'}></Navigation>

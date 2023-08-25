@@ -34,6 +34,7 @@
 
 .bookmark {
     margin-left: auto;
+    cursor: pointer;
 }
 
 .show_condition {

@@ -34,4 +34,9 @@
     align-items: center; /* 수직 가운데 정렬 */
 
     background-color: #F8BE00;
+    cursor: pointer;
+}
+
+.yellow_btn_color:active {
+    background-color: #fcd34c;
 }

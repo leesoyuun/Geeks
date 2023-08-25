@@ -31,7 +31,7 @@ export const UserContext = createContext({
 const Register = () => {
     const [email, setEmail] = useState(null);
     const [nickname, setNickname] = useState("");
-    const [step, setStep] = useState(10);
+    const [step, setStep] = useState(3);
     const [gender, setGender] = useState(null);
     const [major, setMajor] = useState("");
     const [exp, setExp] = useState(null);
@@ -43,7 +43,7 @@ const Register = () => {
         [email, nickname, step, gender, exp, smoking, major, setStep, setEmail, setNickname, setGender, setExp, setSmoking, setMajor]);
 
     useEffect(() => {
-        if (step === 9) { // step 바꾸기
+        if (step === 9) {
             console.log("axios run");
 
             async function fetchData() {

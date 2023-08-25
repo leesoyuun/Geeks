@@ -44,7 +44,7 @@ const LiveNumber = () => {
           </div>
         </div>
         <div className="private_bottom" onClick={handleClick}>
-          <Button content="인증 메일 받기" name={buttonColor}></Button>
+          <Button content="다음" name={buttonColor}></Button>
         </div>
       </div>
     </div>

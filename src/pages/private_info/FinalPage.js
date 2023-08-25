@@ -1,11 +1,16 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Button from "../../components/button/Button";
 import picture1 from "../../static/img/finalpage.png";
 import "./FinalPage.css";
 
 const FinalPage = () => {
     const [buttonColor, setButtonColor] = useState('yellow_btn_color');
+    const navigate = useNavigate();
 
+    const handleClick = () => {
+      navigate("/Home")
+    }
   return (
     <div className="screen">
       <div className="sub_screen">
@@ -18,7 +23,7 @@ const FinalPage = () => {
           </div>
           <img src={picture1} />
         </div>
-        <div className="private_bottom">
+        <div className="private_bottom" onClick={handleClick}>
           <Button content={`룸메이트 찾으러 가기`} name={buttonColor}></Button>
         </div>
       </div>
